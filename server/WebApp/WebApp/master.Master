@@ -1,0 +1,45 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="master.master.cs" Inherits="WebApp.master" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <title>MedApp</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <script src="js/jquery.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <div class="master_header">
+        <div id="title">
+            Med App
+        </div>
+        <div class="right_panel">
+            <input class="topbtn" type="button" value="Login" onclick="showlogin()" />
+            <input class="topbtn" type="button" value="Sign Up" />
+        </div>
+        <div id="login_box" class="login_box">
+            <span>UserName:</span>
+            <input id="username_box" style="height: 25px;" type="text" placeholder="Code or Email">
+            <span>Password:</span>
+            <input id="password_box" style="height: 25px;" type="password" placeholder="Password">
+            <div style="text-align: center; margin-top: 5px;">
+                <input type="Button" value="Login" />
+                <input type="Button" value="Cancel" onclick="hidelogin()" />
+            </div>
+        </div>
+    </div>
+    <div class="content_host" onclick="genclick()">
+        <div class="content">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                 <!-- Content HERE --> 
+            </asp:ContentPlaceHolder>
+        </div>
+    </div>
+    <script src="js/master.js"></script>
+    <script src="js/serverinfo.js"></script>
+    <script src="js/Server.js"></script>
+</body>
+</html>
