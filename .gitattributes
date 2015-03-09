@@ -15,3 +15,14 @@
 *.PDF	 diff=astextplain
 *.rtf	 diff=astextplain
 *.RTF	 diff=astextplain
+*.txt diff=astextplain
+*.css diff=astextplain
+*.html diff=astextplain
+*.htm diff=astextplain
+*.aspx diff=astextplain
+*.asp diff=astextplain
+*.vb diff=astextplain
+*.master diff=astextplain
+*.xaml diff=astextplain
+*.js diff=astextplain
+*.ts diff=astextplain 
