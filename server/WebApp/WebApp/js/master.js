@@ -22,3 +22,23 @@ function hidelogin()
         loginopen = false;
     });
 }
+$("#loginbtn").on("click", function () {
+    var parms = {
+        uname:  $('#username_box').val(),
+        password: $('#password_box').val()
+    };
+    $.ajax({
+        type: "POST",
+        url: "../operators/loginreq.aspx",
+        async: false,
+        data: parms,
+        traditional: true,
+        dataType: "json",
+        success: function (data) {
+            if (data != "0")
+            {
+                hidelogin();
+            }
+        }
+    });
+});

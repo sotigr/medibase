@@ -2,14 +2,22 @@
     function Server() {
     }
     Server.prototype.login = function (username, password) {
-        /*$.ajax({
-        type: "POST",
-        url: serverinfo.loginurl,
-        data: data,
-        success: success,
-        dataType: dataType
-        });*/
+        var parms = {
+            var1: 'some string',
+            var2: 'sdaga'
+        };
+
+        $.ajax({
+            type: "POST",
+            url: "../operators/loginreq.aspx",
+            async: false,
+            data: parms,
+            traditional: true,
+            dataType: "json",
+            success: function (data) {
+                alert(data);
+            }
+        }); 
     };
     return Server;
 })();
-//# sourceMappingURL=Server.js.map

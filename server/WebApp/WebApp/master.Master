@@ -26,7 +26,7 @@
             <span>Password:</span>
             <input id="password_box" style="height: 25px;" type="password" placeholder="Password">
             <div style="text-align: center; margin-top: 5px;">
-                <input type="Button" value="Login" />
+                <input id="loginbtn" type="Button" value="Login" />
                 <input type="Button" value="Cancel" onclick="hidelogin()" />
             </div>
         </div>
@@ -38,8 +38,9 @@
             </asp:ContentPlaceHolder>
         </div>
     </div>
-    <script src="js/master.js"></script>
+   
     <script src="js/serverinfo.js"></script>
     <script src="js/Server.js"></script>
+    <script src="js/master.js"></script>
 </body>
 </html>
