@@ -15,10 +15,12 @@ namespace WebApp.operators
             string password = Request["password"];
             if (username != null && password != null)
             {
-                if (username == globals.DBINFO.SEND_QUERY("SELECT EMAIL FROM USERS WHERE PASSWORD = (SELECT PASSWORD FROM USERS WHERE EMAIL ='" + username + "')"))
+                if (password == globals.DBINFO.SEND_QUERY("SELECT PASSWORD FROM USERS WHERE EMAIL = '" + username + "';"))
                 {
+                    string[] sqlresult = globals.DBINFO.SEND_QUERY_MULT("SELECT USERNAME, PASSWORD FROM USERS WHERE EMAIL = '" + username + "';");
+                    Console.WriteLine(sqlresult[1]);
                     Response.Clear();
-                    Response.Write("OK");
+                    Response.Write("1");
                     Response.End();
                 }
                 else

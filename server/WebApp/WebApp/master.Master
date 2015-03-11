@@ -29,6 +29,7 @@
                 <input id="loginbtn" type="Button" value="Login" />
                 <input type="Button" value="Cancel" onclick="hidelogin()" />
             </div>
+            <div style="display:none; text-align:center; color:red;" id="logerrdiv"></div>
         </div>
     </div>
     <div class="content_host" onclick="genclick()">

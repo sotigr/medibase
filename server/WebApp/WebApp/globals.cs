@@ -25,7 +25,7 @@ namespace WebApp
             public static string PORT = "3306";
             public static string NAME = "team_project";
             public static string USERNAME = "root";
-            public static string PASSWORD = "sotig19951995!";
+            public static string PASSWORD = "";
             public static MySqlConnection DATABASE_INSTANCE;
             public static bool INSTANTIATE_DATABASE()
             {
@@ -44,7 +44,33 @@ namespace WebApp
             {
                 MySqlCommand COMMAND = DATABASE_INSTANCE.CreateCommand();
                 COMMAND.CommandText = SQL_QUERY;
-                return "";
+                MySqlDataReader reader = COMMAND.ExecuteReader();
+                string res = "";
+                while (reader.Read())
+                {
+                    res = reader.GetString(0); 
+                }
+                reader.Close();
+                COMMAND.Dispose();
+                return res;
+            }
+            public static string[] SEND_QUERY_MULT(string SQL_QUERY)
+            {
+                MySqlCommand COMMAND = DATABASE_INSTANCE.CreateCommand();
+                COMMAND.CommandText = SQL_QUERY;
+                MySqlDataReader reader = COMMAND.ExecuteReader();
+                string[] res = new string[reader.VisibleFieldCount];
+                
+                while (reader.Read())
+                {
+                    for (int x = 0; x < reader.VisibleFieldCount;x++ )
+                    { 
+                        res[x] = reader.GetString(x);
+                    } 
+                }
+                reader.Close();
+                COMMAND.Dispose();
+                return res;
             }
             public static void CLOSE_CONNECTION()
             {
