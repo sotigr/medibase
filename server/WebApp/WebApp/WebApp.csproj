@@ -41,6 +41,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data">
+      <HintPath>C:\Users\sotig\Desktop\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
@@ -120,7 +123,7 @@
     <Content Include="Global.asax" />
     <Content Include="js\jquery.js" />
     <Content Include="js\master.js" />
-    <Content Include="operator\verlogin.aspx" />
+    <Content Include="operators\loginreq.aspx" />
     <Content Include="packages.config" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -134,6 +137,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="classes\user.cs" />
     <Compile Include="default.aspx.cs">
       <DependentUpon>default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -144,6 +148,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="globals.cs" />
     <Compile Include="master.Master.cs">
       <DependentUpon>master.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -151,18 +156,20 @@
     <Compile Include="master.Master.designer.cs">
       <DependentUpon>master.Master</DependentUpon>
     </Compile>
-    <Compile Include="operator\verlogin.aspx.cs">
-      <DependentUpon>verlogin.aspx</DependentUpon>
+    <Compile Include="operators\loginreq.aspx.cs">
+      <DependentUpon>loginreq.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="operator\verlogin.aspx.designer.cs">
-      <DependentUpon>verlogin.aspx</DependentUpon>
+    <Compile Include="operators\loginreq.aspx.designer.cs">
+      <DependentUpon>loginreq.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="js\Server.ts" />
-    <TypeScriptCompile Include="js\serverinfo.ts" />
+    <Content Include="js\Server.js" />
+    <Content Include="js\serverinfo.js" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
