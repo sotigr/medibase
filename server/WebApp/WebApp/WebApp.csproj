@@ -125,6 +125,7 @@
     <Content Include="js\jquery.js" />
     <Content Include="js\master.js" />
     <Content Include="operators\loginreq.aspx" />
+    <Content Include="pages\profilecreation.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -162,6 +163,13 @@
     </Compile>
     <Compile Include="operators\loginreq.aspx.designer.cs">
       <DependentUpon>loginreq.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\profilecreation.aspx.cs">
+      <DependentUpon>profilecreation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\profilecreation.aspx.designer.cs">
+      <DependentUpon>profilecreation.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
