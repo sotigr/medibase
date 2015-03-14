@@ -25,7 +25,7 @@ function hidelogin() {
     });
 }
 $('#username_box').on('focus', function () {
-    ResetLogin();
+    ResetLogin(); 
 });
 $('#password_box').on('focus', function () {
     ResetLogin();
@@ -34,6 +34,7 @@ $("#loginbtn").on("click", function () {
     if (!($('#username_box').val() == "" || $('#username_box').val().length < 4 || $('#username_box').val().length > 16)) {
         if (!(validateEmail($('#username_box').val()))) { 
             ShowLoginErr("Email is not valid");
+            $('#username_box').animate({ "border-color": "#ff0000", "color": "#f00" }, 600);
             return;
         }
         var parms = {
@@ -53,15 +54,17 @@ $("#loginbtn").on("click", function () {
                     $('#logerrdiv').css('display', 'none');
                     return;
                 } 
-                ShowLoginErr("Login Failed");
+                ShowLoginErr("Login Failed"); 
             },
             error: function (data) {
-                ShowLoginErr("Connection Error");
+                ShowLoginErr("Connection Error");  
             }
         });
     }
     else {
-        ShowLoginErr("UserName or Password is invalid");
+        ShowLoginErr("UserName or Password is invalid"); 
+        $('#username_box').animate({ "border-color": "#ff0000", "color": "#f00" }, 600);
+        $('#password_box').animate({ "border-color": "#ff0000", "color": "#f00" }, 600);
     }
 }); 
 function ShowLoginErr(text) {
@@ -76,4 +79,6 @@ function HideLoginErr() {
 }
 function ResetLogin() { 
     HideLoginErr();
+    $('#username_box').animate({ "border-color": "#ccc", "color":"#000" }, 300);
+    $('#password_box').animate({ "border-color": "#ccc", "color": "#000" }, 300);
 }
