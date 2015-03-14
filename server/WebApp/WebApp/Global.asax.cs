@@ -16,14 +16,14 @@ namespace WebApp
             globals.AllocConsole(); 
             Console.ForegroundColor = ConsoleColor.White;
             Console.Write(".:"); Console.ForegroundColor = ConsoleColor.Green; Console.Write("Console Initialized"); Console.ForegroundColor = ConsoleColor.White; Console.Write(":."); Console.ForegroundColor = ConsoleColor.Yellow; Console.Write("(For Bebug Only)\n"); Console.ForegroundColor = ConsoleColor.White;
-            if (globals.DBINFO.INSTANTIATE_DATABASE())
+         /*   if (globals.DBINFO.INSTANTIATE_DATABASE())
             {
                 Console.WriteLine("\nMySQL: Connected with " + globals.DBINFO.DATABASE_INSTANCE.Database + " at " + globals.DBINFO.DATABASE_INSTANCE.DataSource); 
             }
             else
             {
                 Console.WriteLine("Database Connection FAILED");
-            }
+            }*/
         }
         void Session_Start(object sender, EventArgs e)
         { 

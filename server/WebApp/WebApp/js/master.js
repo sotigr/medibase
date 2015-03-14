@@ -32,8 +32,7 @@ $('#password_box').on('focus', function () {
 });
 $("#loginbtn").on("click", function () {
     if (!($('#username_box').val() == "" || $('#username_box').val().length < 4 || $('#username_box').val().length > 16)) {
-        if (!(validateEmail($('#username_box').val()))) {
-            $('#username_box').animate({ borderColor: '#ff0000' });
+        if (!(validateEmail($('#username_box').val()))) { 
             ShowLoginErr("Email is not valid");
             return;
         }
@@ -53,9 +52,7 @@ $("#loginbtn").on("click", function () {
                     hidelogin();
                     $('#logerrdiv').css('display', 'none');
                     return;
-                }
-                $('#username_box').animate({ borderColor: 'red' });
-                $('#password_box').animate({ borderColor: 'red' });
+                } 
                 ShowLoginErr("Login Failed");
             },
             error: function (data) {
@@ -77,8 +74,6 @@ function HideLoginErr() {
         $('#logerrdiv').css('display', 'none');
     });
 }
-function ResetLogin() {
-    $('#username_box').animate({ borderColor: '#ccc' });
-    $('#password_box').animate({ borderColor: '#ccc' });
+function ResetLogin() { 
     HideLoginErr();
 }

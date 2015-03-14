@@ -10,8 +10,7 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <script src="js/jquery.js"></script>
-    <script src="js/jquery_ani_color.js"></script>
+    <script src="../js/jquery.js"></script> 
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <div class="master_header">
         <div id="title">
@@ -41,8 +40,8 @@
         </div>
     </div>
    
-    <script src="js/serverinfo.js"></script>
-    <script src="js/Server.js"></script>
-    <script src="js/master.js"></script>
+    <script src="../js/serverinfo.js"></script>
+    <script src="../js/Server.js"></script>
+    <script src="../js/master.js"></script>
 </body>
 </html>
