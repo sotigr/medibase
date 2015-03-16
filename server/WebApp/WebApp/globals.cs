@@ -48,7 +48,7 @@ namespace WebApp
                 string res = "";
                 while (reader.Read())
                 {
-                    res = reader.GetString(0); 
+                    res = reader.GetString(0);
                 }
                 reader.Close();
                 COMMAND.Dispose();
@@ -60,13 +60,17 @@ namespace WebApp
                 COMMAND.CommandText = SQL_QUERY;
                 MySqlDataReader reader = COMMAND.ExecuteReader();
                 string[] res = new string[reader.VisibleFieldCount];
-                
+
                 while (reader.Read())
                 {
-                    for (int x = 0; x < reader.VisibleFieldCount;x++ )
-                    { 
-                        res[x] = reader.GetString(x);
-                    } 
+                    for (int x = 0; x < reader.VisibleFieldCount; x++)
+                    {
+                        try
+                        {
+                            res[x] = reader.GetString(x);
+                        }
+                        catch { }
+                    }
                 }
                 reader.Close();
                 COMMAND.Dispose();

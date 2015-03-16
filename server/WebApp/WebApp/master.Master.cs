@@ -11,7 +11,20 @@ namespace WebApp
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["user"] != null)
+            {
+                js_session_vars.Controls.Add(new LiteralControl("<script>"
+                    + "var loggedin = true;"
+                    + "var username = '" + ((classes.user)Session["user"]).UserName  + "'"
+                    + "</script>"));
+            }
+            else
+            {
+                js_session_vars.Controls.Add(new LiteralControl("<script>"
+                    + "var loggedin = false;"
+                    + "var username = ''"
+                    + "</script>"));
+            }
         }
     }
 }

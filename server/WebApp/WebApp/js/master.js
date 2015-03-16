@@ -1,4 +1,18 @@
-﻿var loginopen = false;
+﻿
+var loginopen = false;
+
+
+$(window).load(function () {
+    if (loggedin) {
+        $('#loginpanel').css('display', 'none');
+        $('#logoutpanel').css('display', 'block');
+        $('#welcome_cont').html('<span>Welcome ' + username + ' </span><a class="topbtn" id="logoutbtn" href="#" onclick="dologout();">Logout</a>');
+    }
+    else {
+        $('#loginpanel').css('display', 'block');
+        $('#logoutpanel').css('display', 'none');
+    }
+});
 function validateEmail(email) {
     var re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email);
@@ -25,14 +39,34 @@ function hidelogin() {
     });
 }
 $('#username_box').on('focus', function () {
-    ResetLogin(); 
+    ResetLogin();
 });
 $('#password_box').on('focus', function () {
     ResetLogin();
 });
+
+function  dologout(){ 
+    var parms = {
+        com: 'logout'
+    };
+    $.ajax({
+        type: "POST",
+        url: "../operators/loginreq.aspx",
+        async: false,
+        data: parms,
+        traditional: true,
+        dataType: "json",
+        success: function (data) {
+            window.location.href = '../default.aspx';
+        },
+        error: function (data) { 
+        }
+    });
+}
+
 $("#loginbtn").on("click", function () {
     if (!($('#username_box').val() == "" || $('#username_box').val().length < 4 || $('#username_box').val().length > 16)) {
-        if (!(validateEmail($('#username_box').val()))) { 
+        if (!(validateEmail($('#username_box').val()))) {
             ShowLoginErr("Email is not valid");
             $('#username_box').animate({ "border-color": "#ff0000", "color": "#f00" }, 600);
             return;
@@ -50,23 +84,27 @@ $("#loginbtn").on("click", function () {
             dataType: "json",
             success: function (data) {
                 if (data == "1") {
+                    $('#loginpanel').css('display', 'none');
+                    $('#logoutpanel').css('display', 'block');
+                    $('#welcome_cont').html('<span>Welcome ' + username + ' </span><a class="topbtn" id="logoutbtn" onclick="dologout();" href="#">Logout</a>');
                     hidelogin();
+                    loggedin = true;
                     $('#logerrdiv').css('display', 'none');
                     return;
-                } 
-                ShowLoginErr("Login Failed"); 
+                }
+                ShowLoginErr("Login Failed");
             },
             error: function (data) {
-                ShowLoginErr("Connection Error");  
+                ShowLoginErr("Connection Error");
             }
         });
     }
     else {
-        ShowLoginErr("UserName or Password is invalid"); 
+        ShowLoginErr("UserName or Password is invalid");
         $('#username_box').animate({ "border-color": "#ff0000", "color": "#f00" }, 600);
         $('#password_box').animate({ "border-color": "#ff0000", "color": "#f00" }, 600);
     }
-}); 
+});
 function ShowLoginErr(text) {
     $('#logerrdiv').html("UserName or Password is not valid.");
     $('#logerrdiv').css('display', 'block');
@@ -77,8 +115,8 @@ function HideLoginErr() {
         $('#logerrdiv').css('display', 'none');
     });
 }
-function ResetLogin() { 
+function ResetLogin() {
     HideLoginErr();
-    $('#username_box').animate({ "border-color": "#ccc", "color":"#000" }, 300);
+    $('#username_box').animate({ "border-color": "#ccc", "color": "#000" }, 300);
     $('#password_box').animate({ "border-color": "#ccc", "color": "#000" }, 300);
 }

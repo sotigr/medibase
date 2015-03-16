@@ -4,8 +4,8 @@
 	margin:0; 
 	font-family:arial;
 	color: #4C4C4C;
-    background-image:url("../images/bg.jpg");
-    background-size:cover;
+    background:url("../images/bg.jpg") no-repeat center center fixed;  
+    background-size: cover;
 }
 .content{
 	margin-top:40px;

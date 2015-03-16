@@ -17,9 +17,12 @@
         <div id="title">
             Med App
         </div>
-        <div class="right_panel">
+        <div class="right_panel" style="display:none;" id="loginpanel">
             <input class="topbtn" type="button" value="Login" onclick="showlogin()" />
             <input class="topbtn" type="button" value="Sign Up" />
+        </div>
+          <div class="right_panel" id="logoutpanel"> 
+            <div id="welcome_cont"></div>   
         </div>
         <div id="login_box" class="login_box">
             <span>UserName:</span>
@@ -40,7 +43,7 @@
             </asp:ContentPlaceHolder>
         </div>
     </div>
-   
+    <asp:PlaceHolder runat="server" id="js_session_vars"></asp:PlaceHolder>
     <script src="../js/serverinfo.js"></script>
     <script src="../js/Server.js"></script>
     <script src="../js/master.js"></script>
