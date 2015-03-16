@@ -4,6 +4,8 @@
 	margin:0; 
 	font-family:arial;
 	color: #4C4C4C;
+    background-image:url("../images/bg.jpg");
+    background-size:cover;
 }
 .content{
 	margin-top:40px;
@@ -44,6 +46,7 @@ input[type=text], input[type=password]{
 	border-radius:5px;
 	width: 100%;
 	padding: 0px; 
+    min-height:21px;
 }
 input[type=button]{
 	color:#4C4C4C;
@@ -52,8 +55,7 @@ input[type=button]{
 	border:#ccc 1px solid;
 	border-radius:5px;
 }
-input[type=button]:hover{
-	 
+input[type=button]:hover{ 
 	background:#F5F5F5; 
 }
 .right_panel{
@@ -68,4 +70,14 @@ input[type=button]:hover{
 }
 .topbtn{
 	height:24px;
+}
+.main_panel{
+    /*background-color:#234;*/ 
+    background-color:#eee;
+    border:1px black solid;
+    box-shadow: #000 0px 0px 10px;
+    border-radius:5px;
+    padding:5px;
+    margin:10px;
+    margin-top:10px; 
 }

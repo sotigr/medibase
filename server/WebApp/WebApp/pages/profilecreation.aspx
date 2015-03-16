@@ -4,34 +4,19 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <style>
-        .createprofile {
-            background: linear-gradient(to bottom right,#A3D1FF,#BFDFFF);
-            font-size: x-large;
-            border: double;
-            width: 600px;
-            height: auto;
-            margin-right: auto;
-            margin-left: auto;
-            padding-left: 40px;
-            border-radius: 10px;
-        }
 
-        body {
-            font-family: Britannic;
-        }
-    </style>
 
-    <div class="createprofile">
-        <h1>Profile creation</h1>
-        <p>Please enter the following information.</p>
-
-        <table>
+    <div class="main_panel" style="width:600px; margin:0 auto; margin-top:50px; ">
+        <div style="text-align:center;">
+            <h1>Profile creation</h1>
+            <p>Please enter the following information.</p> 
+        </div> 
+        <table align="center">
             <tr>
                 <td>Title:
                 </td>
                 <td>
-                    <select id="title">
+                    <select>
                         <option value="mr">Mr</option>
                         <option value="miss">Miss</option>
                         <option value="mrs">Mrs</option>
@@ -43,14 +28,14 @@
                 <td>First name:
                 </td>
                 <td>
-                    <input />
+                    <input type="text"/>
                 </td>
             </tr>
             <tr>
                 <td>Lastname:
                 </td>
                 <td>
-                    <input />
+                    <input type="text" />
                 </td>
             </tr>
             <tr>
@@ -89,82 +74,77 @@
                 <td>E-mail:
                 </td>
                 <td>
-                    <input />
+                    <input type="text"  />
                 </td>
             </tr>
             <tr>
                 <td>Password:
                 </td>
                 <td>
-                    <input />
+                    <input type="password" />
                 </td>
             </tr>
             <tr>
                 <td>Re-enter Password:
                 </td>
                 <td>
-                    <input />
+                    <input type="text" />
                 </td>
             </tr>
             <tr>
-                <td>Occupation:
+                <td>Occupation *:
                 </td>
                 <td>
-                    <input />
+                    <input type="text" />
                 </td>
             </tr>
             <tr>
                 <td>Address:
                 </td>
                 <td>
-                    <input />
+                    <input type="text" />
                 </td>
             </tr>
             <tr>
                 <td>Zip Code:
                 </td>
                 <td>
-                    <input />
+                    <input type="text" />
                 </td>
             </tr>
             <tr>
                 <td>Phone No.:
                 </td>
                 <td>
-                    <input />
+                    <input type="text" />
                 </td>
             </tr>
             <tr>
                 <td>Mobile No.:
                 </td>
                 <td>
-                    <input />
+                    <input type="text" />
                 </td>
             </tr>
             <tr>
                 <td>City:
                 </td>
                 <td>
-                    <input />
+                    <input type="text" />
                 </td>
             </tr>
             <tr>
                 <td>Country:
                 </td>
                 <td>
-                    <input />
+                    <input type="text" />
                 </td>
             </tr>
+           
             <tr>
-                <td>Upload your photo:
-                </td>
-                <td>
-                    <input type="file" name="fileToUpload" id="fileToUpload">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <input type="submit" id="sub" value="Submit" style="height: 50px; width: 80px; font-size: large;">
+                <td   >
+                    <input type="button" id="sub" value="Submit" style="height:30px;"  >
+                    <input type="button" id="sub" value="Cancel" style="height:30px;" onclick="window.location.href = '../default.aspx';"  >
                 </td>
             </tr>
         </table>
