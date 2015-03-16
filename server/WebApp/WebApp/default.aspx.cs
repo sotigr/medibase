@@ -11,7 +11,8 @@ namespace WebApp
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Application["myvar"] = "sotig";
+            Console.WriteLine(Application["myvar"]);
         }
     }
 }

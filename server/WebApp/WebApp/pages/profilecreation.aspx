@@ -16,7 +16,7 @@
                 <td>Title:
                 </td>
                 <td>
-                    <select>
+                    <select id="cp_title">
                         <option value="mr">Mr</option>
                         <option value="miss">Miss</option>
                         <option value="mrs">Mrs</option>
@@ -28,22 +28,22 @@
                 <td>First name:
                 </td>
                 <td>
-                    <input type="text"/>
+                    <input type="text" id="cp_name"/>
                 </td>
             </tr>
             <tr>
                 <td>Lastname:
                 </td>
                 <td>
-                    <input type="text" />
+                    <input type="text" id="cp_surname"/>
                 </td>
             </tr>
             <tr>
                 <td>Gender:
                 </td>
                 <td>
-                    <input id="radio1" type="radio" name="sex" value="male">Male
-					<input type="radio" name="sex" value="female">Female
+                    <input id="radio1" type="radio" name="sex" value="male" id="cp_male">Male
+					<input type="radio" name="sex" value="female" id="cp_female">Female
                 </td>
             </tr>
             <tr>
@@ -74,93 +74,84 @@
                 <td>E-mail:
                 </td>
                 <td>
-                    <input type="text"  />
+                    <input type="text"   id="cp_email"/>
                 </td>
             </tr>
             <tr>
                 <td>Password:
                 </td>
                 <td>
-                    <input type="password" />
+                    <input type="password"  id="cp_pass"/>
                 </td>
             </tr>
             <tr>
                 <td>Re-enter Password:
                 </td>
                 <td>
-                    <input type="text" />
+                    <input type="password"  id="cp_repass"/>
                 </td>
             </tr>
             <tr>
-                <td>Occupation *:
+                <td>
+                    Occupation:
                 </td>
                 <td>
-                    <input type="text" />
+                    <input type="text"  id="cp_occupation"/>
                 </td>
             </tr>
             <tr>
                 <td>Address:
                 </td>
                 <td>
-                    <input type="text" />
+                    <input type="text"  id="cp_address"/>
                 </td>
             </tr>
             <tr>
                 <td>Zip Code:
                 </td>
                 <td>
-                    <input type="text" />
+                    <input type="text"  id="cp_zip"/>
                 </td>
             </tr>
             <tr>
                 <td>Phone No.:
                 </td>
                 <td>
-                    <input type="text" />
+                    <input type="text"  id="cp_phone"/>
                 </td>
             </tr>
             <tr>
                 <td>Mobile No.:
                 </td>
                 <td>
-                    <input type="text" />
+                    <input type="text"  id="cp_mobile"/>
                 </td>
             </tr>
             <tr>
                 <td>City:
                 </td>
                 <td>
-                    <input type="text" />
+                    <input type="text"  id="cp_city"/>
                 </td>
             </tr>
             <tr>
                 <td>Country:
                 </td>
                 <td>
-                    <input type="text" />
+                    <input type="text"  id="cp_country"/>
                 </td>
             </tr>
            
             <tr>
                 <td   >
-                    <input type="button" id="sub" value="Submit" style="height:30px;"  >
-                    <input type="button" id="sub" value="Cancel" style="height:30px;" onclick="window.location.href = '../default.aspx';"  >
+                    <input type="button" id="cp_submit" value="Submit" style="height:30px;">
+                    <input type="button" id="cp_cancel" value="Cancel" style="height:30px;" onclick="window.location.href = '../default.aspx';"  >
                 </td>
             </tr>
         </table>
 
 
-        <script>
+        <script src="../js/profilecreation.js">
 
-            var $select = $("#day");
-            for (i = 1; i <= 31; i++) {
-                $select.append($('<option></option>').val(i).html(i))
-            }
-
-            var $select = $("#year");
-            var d = new Date();
-            for (i = d.getFullYear() ; i >= 1900 ; i--) {
-                $select.append($('<option></option>').val(i).html(i))
-            }
         </script>
 </asp:Content>
