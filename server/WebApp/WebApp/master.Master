@@ -9,41 +9,43 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
-<body>
-    <script src="../js/jquery.js"></script> 
-    <script src="../js/jquery-ui.min.js"></script> 
+<body >
     <link rel="stylesheet" type="text/css" href="../css/main.css">
-    <div class="master_header">
-        <div id="title">
-            Med App
-        </div>
-        <div class="right_panel" style="display:none;" id="loginpanel">
-            <input class="topbtn" type="button" value="Login" onclick="showlogin()" />
-            <input class="topbtn" type="button" value="Sign Up" />
-        </div>
-          <div class="right_panel" id="logoutpanel"> 
-            <div id="welcome_cont"></div>   
-        </div>
-        <div id="login_box" class="login_box">
-            <span>UserName:</span>
-            <input id="username_box" style="height: 25px;" type="text" placeholder="Code or Email">
-            <span>Password:</span>
-            <input id="password_box" style="height: 25px;" type="password" placeholder="Password">
-            <div style="text-align: center; margin-top: 5px;">
-                <input id="loginbtn" type="Button" value="Login" />
-                <input type="Button" value="Cancel" onclick="hidelogin()" />
+    <script src="../js/jquery.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <div class="disable-select" style ="cursor:default;">
+        <div class="master_header">
+            <div id="title">
+                Med App
             </div>
-            <div style="display:none; text-align:center; color:red;" id="logerrdiv"></div>
+            <div class="right_panel" style="display: none;" id="loginpanel">
+                <input class="topbtn" type="button" value="Login" onclick="showlogin()" />
+                <input class="topbtn" type="button" value="Sign Up" onclick="window.location.href = '../pages/profilecreation.aspx';" />
+            </div>
+            <div class="right_panel" id="logoutpanel">
+                <div id="welcome_cont"></div>
+            </div>
+            <div id="login_box" class="login_box">
+                <span>UserName:</span>
+                <input id="username_box" style="height: 25px;" type="text" placeholder="Code or Email">
+                <span>Password:</span>
+                <input id="password_box" style="height: 25px;" type="password" placeholder="Password">
+                <div style="text-align: center; margin-top: 5px;">
+                    <input id="loginbtn" type="Button" value="Login" />
+                    <input type="Button" value="Cancel" onclick="hidelogin()" />
+                </div>
+                <div style="display: none; text-align: center; color: red;" id="logerrdiv"></div>
+            </div>
+        </div>
+        <div class="content_host" onclick="genclick()">
+            <div class="content">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    <!-- Content HERE -->
+                </asp:ContentPlaceHolder>
+            </div>
         </div>
     </div>
-    <div class="content_host" onclick="genclick()">
-        <div class="content">
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-                 <!-- Content HERE --> 
-            </asp:ContentPlaceHolder>
-        </div>
-    </div>
-    <asp:PlaceHolder runat="server" id="js_session_vars"></asp:PlaceHolder>
+    <asp:PlaceHolder runat="server" ID="js_session_vars"></asp:PlaceHolder>
     <script src="../js/serverinfo.js"></script>
     <script src="../js/Server.js"></script>
     <script src="../js/master.js"></script>

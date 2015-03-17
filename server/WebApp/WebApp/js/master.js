@@ -45,7 +45,7 @@ $('#password_box').on('focus', function () {
     ResetLogin();
 });
 
-function  dologout(){ 
+function dologout() {
     var parms = {
         com: 'logout'
     };
@@ -59,7 +59,7 @@ function  dologout(){
         success: function (data) {
             window.location.href = '../default.aspx';
         },
-        error: function (data) { 
+        error: function (data) {
         }
     });
 }
@@ -87,9 +87,12 @@ $("#loginbtn").on("click", function () {
                     $('#loginpanel').css('display', 'none');
                     $('#logoutpanel').css('display', 'block');
                     $('#welcome_cont').html('<span>Welcome ' + username + ' </span><a class="topbtn" id="logoutbtn" onclick="dologout();" href="#">Logout</a>');
-                    hidelogin();
+
                     loggedin = true;
                     $('#logerrdiv').css('display', 'none');
+                    hidelogin();
+                    setTimeout(function () { location.reload(); }, 600);
+
                     return;
                 }
                 ShowLoginErr("Login Failed");

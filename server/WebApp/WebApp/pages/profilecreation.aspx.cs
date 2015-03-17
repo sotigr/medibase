@@ -11,7 +11,12 @@ namespace WebApp.pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["user"] != null)
+            {
+                Response.Clear();
+                Response.Write("403 Forbidden");
+                Response.End();
+            }
         }
     }
 }

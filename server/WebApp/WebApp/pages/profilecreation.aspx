@@ -2,13 +2,13 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content  ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
 
 
     <div class="main_panel" style="width:600px; margin:0 auto; margin-top:50px; ">
         <div style="text-align:center;">
-            <h1>Profile creation</h1>
+            <h1>Account creation</h1>
             <p>Please enter the following information.</p> 
         </div> 
         <table align="center">
@@ -144,7 +144,7 @@
            
             <tr>
                 <td   >
-                    <input type="button" id="cp_submit" value="Submit" style="height:30px;">
+                    <input type="button" id="cp_submit" value="Create" style="height:30px;">
                     <input type="button" id="cp_cancel" value="Cancel" style="height:30px;" onclick="window.location.href = '../default.aspx';"  >
                 </td>
             </tr>
