@@ -28,8 +28,9 @@ namespace WebApp.operators
             {
                 if (password == globals.DBINFO.SEND_QUERY("SELECT PASSWORD FROM USERS WHERE EMAIL = '" + username + "';"))
                 {
-                    string[] q = globals.DBINFO.SEND_QUERY_MULT("SELECT USERID, TITLE, FIRSTNAME, LASTNAME, GENUS, AGE, PROFESSION, EMAIL, PASSWORD, ADDRESS1, ADDRESS2, PHONE, CELLPHONE, TOWN, ZIPCODE, COUNTRY FROM USERS WHERE EMAIL = '" + username + "';");
-                    Session["user"] = new classes.user() { id = q[0], title = q[1], firstname = q[2], lastname = q[3], gender = q[4], age = q[5], profession = q[6], email = q[7], password = q[8], address1 = q[9], address2 = q[10], phone = q[11], celphone = q[12], town = q[13], zipcode = q[14], country = q[15] };
+                    string[] q = globals.DBINFO.SEND_QUERY_MULT("SELECT  NAME, LASTNAME, USERNAME, PASSWORD, EMAIL, ADDRESS1, ADDRESS2, PHONE, CELLPHONE,DATEOFBIRTH FROM USERS WHERE EMAIL = '" + username + "';");
+                    Session["user"] = new classes.user() { FirstName = q[0], LastName = q[1], UserName = q[2], Password = q[3], Email = q[4], Address1 = q[5], Address2 = q[6], Phone = q[7], Cellphone = q[8], DateOfBirth = Convert.ToDateTime(q[9]) };
+                    // Console.WriteLine(((classes.user)Session["user"]).DateOfBirth.ToString("dd-MM-yyyy"));
                     Respond("1");
                     return;
                 }

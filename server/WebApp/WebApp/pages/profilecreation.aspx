@@ -2,23 +2,15 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-<style>
+<asp:Content  ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    body {
-        font-size:12px;
-    }
-    .overflow {
-        max-height:300px;
-    }
-</style>
-  
 
-    <div class="main_panel" style="width: 600px; margin: 0 auto; margin-top: 50px;">
-        <div style="text-align: center;">
+
+    <div class="main_panel" style="width:600px; margin:0 auto; margin-top:50px; ">
+        <div style="text-align:center;">
             <h1>Account creation</h1>
-            <p>Please enter the following information.</p>
-        </div>
+            <p>Please enter the following information.</p> 
+        </div> 
         <table align="center">
             <tr>
                 <td>Title:
@@ -36,25 +28,22 @@
                 <td>First name:
                 </td>
                 <td>
-                    <input type="text" id="cp_name" />
+                    <input type="text" id="cp_name"/>
                 </td>
             </tr>
             <tr>
                 <td>Lastname:
                 </td>
                 <td>
-                    <input type="text" id="cp_surname" />
+                    <input type="text" id="cp_surname"/>
                 </td>
             </tr>
             <tr>
                 <td>Gender:
                 </td>
                 <td>
-                    
-                    <div id="radio">
-                        <input type="radio" name="radio" id="cp_male"><label for="cp_male">Male</label>
-                        <input type="radio" name="radio" id="cp_female"><label for="cp_female">Female</label>
-                    </div>
+                    <input id="radio1" type="radio" name="sex" value="male" id="cp_male">Male
+					<input type="radio" name="sex" value="female" id="cp_female">Female
                 </td>
             </tr>
             <tr>
@@ -85,77 +74,78 @@
                 <td>E-mail:
                 </td>
                 <td>
-                    <input type="text" id="cp_email" />
+                    <input type="text"   id="cp_email"/>
                 </td>
             </tr>
             <tr>
                 <td>Password:
                 </td>
                 <td>
-                    <input type="password" id="cp_pass" />
+                    <input type="password"  id="cp_pass"/>
                 </td>
             </tr>
             <tr>
                 <td>Re-enter Password:
                 </td>
                 <td>
-                    <input type="password" id="cp_repass" />
+                    <input type="password"  id="cp_repass"/>
                 </td>
             </tr>
             <tr>
-                <td>Occupation:
+                <td>
+                    Occupation:
                 </td>
                 <td>
-                    <input type="text" id="cp_occupation" />
+                    <input type="text"  id="cp_occupation"/>
                 </td>
             </tr>
             <tr>
                 <td>Address:
                 </td>
                 <td>
-                    <input type="text" id="cp_address" />
+                    <input type="text"  id="cp_address"/>
                 </td>
             </tr>
             <tr>
                 <td>Zip Code:
                 </td>
                 <td>
-                    <input type="text" id="cp_zip" />
+                    <input type="text"  id="cp_zip"/>
                 </td>
             </tr>
             <tr>
                 <td>Phone No.:
                 </td>
                 <td>
-                    <input type="text" id="cp_phone" />
+                    <input type="text"  id="cp_phone"/>
                 </td>
             </tr>
             <tr>
                 <td>Mobile No.:
                 </td>
                 <td>
-                    <input type="text" id="cp_mobile" />
+                    <input type="text"  id="cp_mobile"/>
                 </td>
             </tr>
             <tr>
                 <td>City:
                 </td>
                 <td>
-                    <input type="text" id="cp_city" />
+                    <input type="text"  id="cp_city"/>
                 </td>
             </tr>
             <tr>
                 <td>Country:
                 </td>
                 <td>
-                    <input type="text" id="cp_country" />
+                    <input type="text"  id="cp_country"/>
                 </td>
             </tr>
-
+           
             <tr>
-                <td>
-                    <input type="button" id="cp_submit" value="Create" style="height: 30px;">
-                    <input type="button" id="cp_cancel" value="Cancel" style="height: 30px;" onclick="window.location.href = '../default.aspx';">
+                <td   >
+                    <input type="button" id="cp_submit" value="Create" style="height:30px;">
+                    <input type="button" id="cp_cancel" value="Cancel" style="height:30px;" onclick="window.location.href = '../default.aspx';"  >
                 </td>
             </tr>
         </table>
@@ -164,5 +154,4 @@
         <script src="../js/profilecreation.js">
 
         </script>
-      
 </asp:Content>

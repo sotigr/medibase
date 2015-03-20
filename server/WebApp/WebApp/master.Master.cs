@@ -15,7 +15,7 @@ namespace WebApp
             {
                 js_session_vars.Controls.Add(new LiteralControl("<script>"
                     + "var loggedin = true;"
-                    + "var username = '" + ((classes.user)Session["user"]).firstname  + "'"
+                    + "var username = '" + ((classes.user)Session["user"]).UserName  + "'"
                     + "</script>"));
             }
             else
