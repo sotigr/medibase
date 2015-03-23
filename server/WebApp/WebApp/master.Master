@@ -9,13 +9,13 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
-<body >
-     <link rel="stylesheet" href="/css/jquery-ui.min.css">
+<body>
+    <link rel="stylesheet" href="/css/jquery-ui.min.css">
     <link rel="stylesheet" href="/css/jquery-ui.theme.min.css">
     <link rel="stylesheet" type="text/css" href="../css/main.css">
     <script src="../js/jquery.js"></script>
     <script src="../js/jquery-ui.min.js"></script>
-    <div class="disable-select" style ="cursor:default;">
+    <div class="disable-select" style="cursor: default;">
         <div class="master_header">
             <div id="title">
                 Med App
@@ -40,16 +40,17 @@
             </div>
         </div>
         <div class="content_host" onclick="genclick()">
-            <div class="content">
+            <div class="content"> 
+                <asp:PlaceHolder runat="server" ID="js_session_vars"></asp:PlaceHolder> 
+                <script src="../js/serverinfo.js"></script>
+                <script src="../js/Server.js"></script>
+                <script src="../js/master.js"></script>
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                     <!-- Content HERE -->
                 </asp:ContentPlaceHolder>
             </div>
         </div>
     </div>
-    <asp:PlaceHolder runat="server" ID="js_session_vars"></asp:PlaceHolder>
-    <script src="../js/serverinfo.js"></script>
-    <script src="../js/Server.js"></script>
-    <script src="../js/master.js"></script>
+   
 </body>
 </html>

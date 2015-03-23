@@ -57,7 +57,7 @@ function dologout() {
         traditional: true,
         dataType: "json",
         success: function (data) {
-            window.location.href = '../default.aspx';
+            window.location.href = '/default.aspx';
         },
         error: function (data) {
         }

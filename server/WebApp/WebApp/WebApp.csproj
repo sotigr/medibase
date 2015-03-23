@@ -146,6 +146,7 @@
     <Content Include="js\jquery.js" />
     <Content Include="js\master.js" />
     <Content Include="js\profilecreation.js" />
+    <Content Include="operators\create_acc.aspx" />
     <Content Include="operators\loginreq.aspx" />
     <Content Include="pages\profilecreation.aspx" />
     <Content Include="pages\testpage.aspx" />
@@ -179,6 +180,13 @@
     </Compile>
     <Compile Include="master.Master.designer.cs">
       <DependentUpon>master.Master</DependentUpon>
+    </Compile>
+    <Compile Include="operators\create_acc.aspx.cs">
+      <DependentUpon>create_acc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="operators\create_acc.aspx.designer.cs">
+      <DependentUpon>create_acc.aspx</DependentUpon>
     </Compile>
     <Compile Include="operators\loginreq.aspx.cs">
       <DependentUpon>loginreq.aspx</DependentUpon>
