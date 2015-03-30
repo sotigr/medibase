@@ -52,7 +52,7 @@ $('#cp_submit').on('click', function () {
     }
     else {
         if (d.getFullYear() - year >= 18) {
-            if (validateEmail(email)) {
+            if (validateEmail(email) && pass == repass) {
                 var parms = {
                     s_title: title,
                     s_name: name,
@@ -63,7 +63,7 @@ $('#cp_submit').on('click', function () {
                     s_year: year,
                     s_email: email,
                     s_pass: pass,
-                    s_repass: reapss,
+                    s_repass: repass,
                     s_occ: occupation,
                     s_addr: address,
                     s_zip: zip,

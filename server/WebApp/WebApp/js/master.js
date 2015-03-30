@@ -65,7 +65,7 @@ function dologout() {
 }
 
 $("#loginbtn").on("click", function () {
-    if (!($('#username_box').val() == "" || $('#username_box').val().length < 4 || $('#username_box').val().length > 16)) {
+    if (!($('#username_box').val() == "" )) {
         if (!(validateEmail($('#username_box').val()))) {
             ShowLoginErr("Email is not valid");
             $('#username_box').animate({ "border-color": "#ff0000", "color": "#f00" }, 600);

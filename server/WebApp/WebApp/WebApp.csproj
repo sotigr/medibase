@@ -148,6 +148,7 @@
     <Content Include="js\profilecreation.js" />
     <Content Include="operators\create_acc.aspx" />
     <Content Include="operators\loginreq.aspx" />
+    <Content Include="pages\informationpage.aspx" />
     <Content Include="pages\profilecreation.aspx" />
     <Content Include="pages\testpage.aspx" />
     <Content Include="Web.config" />
@@ -194,6 +195,13 @@
     </Compile>
     <Compile Include="operators\loginreq.aspx.designer.cs">
       <DependentUpon>loginreq.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\informationpage.aspx.cs">
+      <DependentUpon>informationpage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\informationpage.aspx.designer.cs">
+      <DependentUpon>informationpage.aspx</DependentUpon>
     </Compile>
     <Compile Include="pages\profilecreation.aspx.cs">
       <DependentUpon>profilecreation.aspx</DependentUpon>
