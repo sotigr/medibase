@@ -146,7 +146,6 @@
     <Content Include="operators\loginreq.aspx" />
     <Content Include="pages\informationpage.aspx" />
     <Content Include="pages\profilecreation.aspx" />
-    <Content Include="pages\testpage.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -205,13 +204,6 @@
     </Compile>
     <Compile Include="pages\profilecreation.aspx.designer.cs">
       <DependentUpon>profilecreation.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="pages\testpage.aspx.cs">
-      <DependentUpon>testpage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="pages\testpage.aspx.designer.cs">
-      <DependentUpon>testpage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
