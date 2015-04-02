@@ -3,7 +3,7 @@
     padding: 0;
     margin: 0;
     font-family: arial;
-    color: #4C4C4C;
+    color: #C3CFDE;
     background: url("../images/bg.jpg") no-repeat center center fixed;
     background-size: cover;
 }
@@ -29,9 +29,9 @@
 }
 
 .master_header {
-    background: #ddd;
+background: #45609D;  
     height: 40px;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #000;
     position: fixed;
     width: 100%;
     top: 0px;
@@ -41,13 +41,14 @@
     position: absolute;
     width: 200px;
     margin-top: -140px;
-    background: #ddd;
-    border: 1px solid #ccc;
-    border-radius: 0px 0px 5px 5px;
-    box-shadow: 0px 0px 5px #aaa;
+    background: #E3E9F7;
+    border: 1px solid #000;
+    border-radius: 0px 0px 0px 0px;
+    box-shadow: 0px 0px 5px #000;
     right: 0;
     margin-right: 10px;
     padding: 3px 5px 5px 5px;
+    color:black;
 }
 
 input[type=text], input[type=password] {
@@ -56,36 +57,25 @@ input[type=text], input[type=password] {
     padding: 0px;
     min-height: 21px;
     border: 1px solid #aaa;
-    background-image: -webkit-gradient(linear, center top, center bottom, from(#bfbfbf), to(#fcfcfc), color-stop(10%, #d9d9d9), color-stop(88%, #f2f2f2), color-stop(97%, #f7f7f7));
-    background-image: -webkit-linear-gradient(top, #bfbfbf, #d9d9d9 10%, #f2f2f2 88%, #f7f7f7 97%, #fcfcfc);
-    background-image: -moz-linear-gradient(top, #bfbfbf, #d9d9d9 10%, #f2f2f2 88%, #f7f7f7 97%, #fcfcfc);
-    background-image: -o-linear-gradient(top, #bfbfbf, #d9d9d9 10%, #f2f2f2 88%, #f7f7f7 97%, #fcfcfc);
-    background-image: -ms-linear-gradient(top, #bfbfbf, #d9d9d9 10%, #f2f2f2 88%, #f7f7f7 97%, #fcfcfc);
-    background-image: linear-gradient(to bottom, #bfbfbf, #d9d9d9 10%, #f2f2f2 88%, #f7f7f7 97%, #fcfcfc);
+    background-color: #FFFFFF;
     -webkit-box-shadow: 0 1px 0 white, inset 0 1px 7px rgba(0,0,0,0.4);
     -moz-box-shadow: 0 1px 0 white, inset 0 1px 7px rgba(0,0,0,0.4);
-    box-shadow: 0 1px 0 white, inset 0 1px 7px rgba(0,0,0,0.4);
-    border-radius:5px;
+    border-radius: 0px;
 }
+
     input[type=text]:focus, input[type=password]:focus {
-     border: 1px solid #1288ff; 
+        border: 1px solid #1288ff;
     }
+
 input[type=button] {
-    border: 1px solid #aaa;
-    background-image: -webkit-gradient(linear, center top, center bottom, from(#fcfcfc), to(#bfbfbf), color-stop(3%, #f7f7f7), color-stop(12%, #f2f2f2), color-stop(90%, #d9d9d9));
-    background-image: -webkit-linear-gradient(top, #fcfcfc, #f7f7f7 3%, #f2f2f2 12%, #d9d9d9 90%, #bfbfbf);
-    background-image: -moz-linear-gradient(top, #fcfcfc, #f7f7f7 3%, #f2f2f2 12%, #d9d9d9 90%, #bfbfbf);
-    background-image: -o-linear-gradient(top, #fcfcfc, #f7f7f7 3%, #f2f2f2 12%, #d9d9d9 90%, #bfbfbf);
-    background-image: -ms-linear-gradient(top, #fcfcfc, #f7f7f7 3%, #f2f2f2 12%, #d9d9d9 90%, #bfbfbf);
-    background-image: linear-gradient(to bottom, #fcfcfc, #f7f7f7 3%, #f2f2f2 12%, #d9d9d9 90%, #bfbfbf);
- 
-    border-radius:5px;
+    border: 1px solid #fff;
+    background-color: #45609D;
+    color: #E3E9F7; 
+    border-radius: 0px;
 }
 
     input[type=button]:hover {
-        -webkit-box-shadow:inset 0 0 5px #1288ff;
-        -moz-box-shadow:  inset 0 0 5px #1288ff;
-        box-shadow:inset 0 0 5px #1288ff;
+        background-color: #768CC0;
     }
 
 .right_panel {
@@ -98,19 +88,32 @@ input[type=button] {
     font-size: 27px;
     font-family: calibri;
     font-weight: bold;
+    color:white;
 }
 
 .topbtn {
     height: 24px;
+    color:#fff;
 }
 
 .main_panel {
     /*background-color:#234;*/
-    background-color: #eee;
+    background-color: #E3E9F7;
     border: 1px black solid;
     box-shadow: #000 0px 0px 10px;
-    border-radius: 5px;
+    border-radius: 0px;
     padding: 5px;
     margin: 10px;
     margin-top: 10px;
+    color:black;
 }
+a {
+    color: #000;
+    font-style:italic;
+    text-decoration:none;
+    transition: color 1s ease;
+}
+    a:hover { 
+        transition: color 0.3s ease;
+        color:#aaa; 
+    }

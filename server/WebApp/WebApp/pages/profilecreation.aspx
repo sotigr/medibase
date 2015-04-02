@@ -4,15 +4,19 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <style>
+        body {
+            font-size: 12px;
+        }
 
-    body {
-        font-size:12px;
-    }
-    .overflow {
-        max-height:300px;
-    }
-</style>
-  
+        .overflow {
+            max-height: 300px;
+        }
+
+        select {
+            padding: 10px;
+        }
+    </style>
+
 
     <div class="main_panel" style="width: 600px; margin: 0 auto; margin-top: 50px;">
         <div style="text-align: center;">
@@ -50,7 +54,7 @@
                 <td>Gender:
                 </td>
                 <td>
-                    
+
                     <div id="radio">
                         <input type="radio" name="radio" id="cp_male"><label for="cp_male">Male</label>
                         <input type="radio" name="radio" id="cp_female"><label for="cp_female">Female</label>
@@ -164,5 +168,4 @@
         <script src="../js/profilecreation.js">
 
         </script>
-      
 </asp:Content>

@@ -6,10 +6,9 @@
     <div>
         dz
         <div class="main_panel" style="height: 100px; width: 100px;">
-            HELLO
+           <a href="http://www.google.com"> HELLO</a>
         </div>
         <div class="main_panel" style="height: 100px; "> 
-        </div>
-
+        </div> 
     </div> 
 </asp:Content>

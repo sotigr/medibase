@@ -133,11 +133,7 @@
     <Content Include="css\images\ui-icons_999999_256x240.png" />
     <Content Include="css\images\ui-icons_fbc856_256x240.png" />
     <Content Include="css\jquery-ui.css" />
-    <Content Include="css\jquery-ui.min.css" />
-    <Content Include="css\jquery-ui.structure.css" />
-    <Content Include="css\jquery-ui.structure.min.css" />
     <Content Include="css\jquery-ui.theme.css" />
-    <Content Include="css\jquery-ui.theme.min.css" />
     <Content Include="css\main.css" />
     <Content Include="default.aspx" />
     <Content Include="favicon.ico" />

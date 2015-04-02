@@ -1,7 +1,6 @@
 ﻿
 var loginopen = false;
-
-
+ 
 $(window).load(function () {
     if (loggedin) {
         $('#loginpanel').css('display', 'none');
@@ -40,11 +39,20 @@ function hidelogin() {
 }
 $('#username_box').on('focus', function () {
     ResetLogin();
+    $('#username_box').animate({ "border-color": "#1288ff", "color": "#000" }, 300);
 });
 $('#password_box').on('focus', function () {
-    ResetLogin();
+    ResetLogin(); 
+    $('#password_box').animate({ "border-color": "#1288ff", "color": "#000" }, 300);
 });
-
+$('#username_box').off('focus', function () {
+    ResetLogin();
+    $('#username_box').animate({ "border-color": "#ccc", "color": "#000" }, 300);
+});
+$('#password_box').off('focus', function () {
+    ResetLogin();
+    $('#password_box').animate({ "border-color": "#ccc", "color": "#000" }, 300);
+});
 function dologout() {
     var parms = {
         com: 'logout'
