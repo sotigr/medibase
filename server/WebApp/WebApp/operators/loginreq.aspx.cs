@@ -28,8 +28,27 @@ namespace WebApp.operators
             {
                 if (password == globals.DBINFO.SEND_QUERY("SELECT PASSWORD FROM USERS WHERE EMAIL = '" + username + "';"))
                 {
-                    string[] q = globals.DBINFO.SEND_QUERY_MULT("SELECT USERID, TITLE, FIRSTNAME, LASTNAME, GENUS, AGE, PROFESSION, EMAIL, PASSWORD, ADDRESS1, ADDRESS2, PHONE, CELLPHONE, TOWN, ZIPCODE, COUNTRY FROM USERS WHERE EMAIL = '" + username + "';");
-                    Session["user"] = new classes.user() { id = q[0], title = q[1], firstname = q[2], lastname = q[3], gender = q[4], age = q[5], profession = q[6], email = q[7], password = q[8], address1 = q[9], address2 = q[10], phone = q[11], celphone = q[12], town = q[13], zipcode = q[14], country = q[15] };
+                    IDictionary<string, string> q = globals.DBINFO.SEND_QUERY_MULT_DICT("SELECT USERID, TITLE, FIRSTNAME, LASTNAME, GENUS, AGE, PROFESSION, EMAIL, PASSWORD, ADDRESS1, ADDRESS2, PHONE, CELLPHONE, TOWN, ZIPCODE, COUNTRY FROM USERS WHERE EMAIL = '" + username + "';");
+
+                    Session["user"] = new classes.user() {
+                        id = q["USERID"],
+                        title = q["TITLE"],
+                        firstname = q["FIRSTNAME"],
+                        lastname = q["LASTNAME"],
+                        gender = q["GENUS"],
+                        age = q["AGE"],
+                        profession = q["PROFESSION"],
+                        email = q["EMAIL"],
+                        password = q["PASSWORD"],
+                        address1 = q["ADDRESS1"],
+                        address2 = q["ADDRESS2"],
+                        phone = q["PHONE"],
+                        celphone = q["CELLPHONE"],
+                        town = q["TOWN"],
+                        zipcode = q["ZIPCODE"],
+                        country = q["COUNTRY"]
+                    };
+
                     Respond("1");
                     return;
                 }

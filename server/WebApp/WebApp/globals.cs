@@ -54,7 +54,7 @@ namespace WebApp
                 COMMAND.Dispose();
                 return res;
             }
-            public static string[] SEND_QUERY_MULT(string SQL_QUERY)
+            public static  string[] SEND_QUERY_MULT(string SQL_QUERY)
             {
                 MySqlCommand COMMAND = DATABASE_INSTANCE.CreateCommand();
                 COMMAND.CommandText = SQL_QUERY;
@@ -82,6 +82,37 @@ namespace WebApp
                 COMMAND.Dispose();
                 return res;
             }
+             
+            public static IDictionary<string, string> SEND_QUERY_MULT_DICT(string SQL_QUERY)
+            {
+                MySqlCommand COMMAND = DATABASE_INSTANCE.CreateCommand();
+                COMMAND.CommandText = SQL_QUERY;
+                MySqlDataReader reader = COMMAND.ExecuteReader();
+                IDictionary<string, string> dict = new Dictionary<string, string>(); 
+                while (reader.Read())
+                {
+                    for (int x = 0; x < reader.VisibleFieldCount; x++)
+                    {
+                        try
+                        {
+                            if (typeof(string).Equals(reader.GetFieldType(x)))
+                            {
+                                dict[reader.GetName(x)] = reader.GetString(x);
+                            }
+                            else
+                            {
+                                dict[reader.GetName(x)] = Convert.ToString(reader.GetString(x));
+                            }
+                        }
+                        catch { }
+                    }
+                }
+                reader.Close();
+                COMMAND.Dispose();
+                return dict;
+            }
+
+
             public static void CLOSE_CONNECTION()
             {
                 DATABASE_INSTANCE.Clone();
