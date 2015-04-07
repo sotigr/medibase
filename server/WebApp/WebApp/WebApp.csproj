@@ -145,6 +145,7 @@
     <Content Include="js\profilecreation.js" />
     <Content Include="operators\create_acc.aspx" />
     <Content Include="operators\loginreq.aspx" />
+    <Content Include="pages\Contactpage.aspx" />
     <Content Include="pages\disp_and_edit_acc.aspx" />
     <Content Include="pages\informationpage.aspx" />
     <Content Include="pages\profilecreation.aspx" />
@@ -192,6 +193,12 @@
     </Compile>
     <Compile Include="operators\loginreq.aspx.designer.cs">
       <DependentUpon>loginreq.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\Contactpage.aspx.cs">
+      <DependentUpon>Contactpage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\Contactpage.aspx.designer.cs">
+      <DependentUpon>Contactpage.aspx</DependentUpon>
     </Compile>
     <Compile Include="pages\disp_and_edit_acc.aspx.cs">
       <DependentUpon>disp_and_edit_acc.aspx</DependentUpon>
