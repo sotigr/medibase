@@ -138,12 +138,14 @@
     <Content Include="default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="js\disp_and_edit_acc.js" />
     <Content Include="js\jquery-ui.min.js" />
     <Content Include="js\jquery.js" />
     <Content Include="js\master.js" />
     <Content Include="js\profilecreation.js" />
     <Content Include="operators\create_acc.aspx" />
     <Content Include="operators\loginreq.aspx" />
+    <Content Include="pages\disp_and_edit_acc.aspx" />
     <Content Include="pages\informationpage.aspx" />
     <Content Include="pages\profilecreation.aspx" />
     <Content Include="Web.config" />
@@ -190,6 +192,13 @@
     </Compile>
     <Compile Include="operators\loginreq.aspx.designer.cs">
       <DependentUpon>loginreq.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\disp_and_edit_acc.aspx.cs">
+      <DependentUpon>disp_and_edit_acc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\disp_and_edit_acc.aspx.designer.cs">
+      <DependentUpon>disp_and_edit_acc.aspx</DependentUpon>
     </Compile>
     <Compile Include="pages\informationpage.aspx.cs">
       <DependentUpon>informationpage.aspx</DependentUpon>
