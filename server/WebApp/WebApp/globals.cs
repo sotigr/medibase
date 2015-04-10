@@ -23,7 +23,7 @@ namespace WebApp
         {
             public static string HOST = "localhost";
             public static string PORT = "3306";
-            public static string NAME = "tp";
+            public static string NAME = "teamproject";
             public static string USERNAME = "root";
             public static string PASSWORD = "";
             public static MySqlConnection DATABASE_INSTANCE;

@@ -138,15 +138,16 @@
     <Content Include="default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="js\disp_and_edit_acc.js" />
+    <Content Include="js\edit_acc.js" />
     <Content Include="js\jquery-ui.min.js" />
     <Content Include="js\jquery.js" />
     <Content Include="js\master.js" />
     <Content Include="js\profilecreation.js" />
     <Content Include="operators\create_acc.aspx" />
+    <Content Include="operators\edit_acc.aspx" />
     <Content Include="operators\loginreq.aspx" />
     <Content Include="pages\Contactpage.aspx" />
-    <Content Include="pages\disp_and_edit_acc.aspx" />
+    <Content Include="pages\edit_acc.aspx" />
     <Content Include="pages\informationpage.aspx" />
     <Content Include="pages\profilecreation.aspx" />
     <Content Include="Web.config" />
@@ -187,6 +188,13 @@
     <Compile Include="operators\create_acc.aspx.designer.cs">
       <DependentUpon>create_acc.aspx</DependentUpon>
     </Compile>
+    <Compile Include="operators\edit_acc.aspx.cs">
+      <DependentUpon>edit_acc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="operators\edit_acc.aspx.designer.cs">
+      <DependentUpon>edit_acc.aspx</DependentUpon>
+    </Compile>
     <Compile Include="operators\loginreq.aspx.cs">
       <DependentUpon>loginreq.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -196,16 +204,17 @@
     </Compile>
     <Compile Include="pages\Contactpage.aspx.cs">
       <DependentUpon>Contactpage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="pages\Contactpage.aspx.designer.cs">
       <DependentUpon>Contactpage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="pages\disp_and_edit_acc.aspx.cs">
-      <DependentUpon>disp_and_edit_acc.aspx</DependentUpon>
+    <Compile Include="pages\edit_acc.aspx.cs">
+      <DependentUpon>edit_acc.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="pages\disp_and_edit_acc.aspx.designer.cs">
-      <DependentUpon>disp_and_edit_acc.aspx</DependentUpon>
+    <Compile Include="pages\edit_acc.aspx.designer.cs">
+      <DependentUpon>edit_acc.aspx</DependentUpon>
     </Compile>
     <Compile Include="pages\informationpage.aspx.cs">
       <DependentUpon>informationpage.aspx</DependentUpon>

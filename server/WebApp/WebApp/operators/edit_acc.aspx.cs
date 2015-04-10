@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace WebApp.operators
 {
-    public partial class create_acc : System.Web.UI.Page
+    public partial class edit_acc : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -19,8 +19,6 @@ namespace WebApp.operators
             string Month = Request["s_month"];
             string Year = Request["s_year"];
             string Email = Request["s_email"];
-            string Pass = Request["s_pass"];
-            string RePass = Request["s_repass"];
             string Occupation = Request["s_occ"];
             string Address = Request["s_addr"];
             string Zip = Request["s_zip"];
@@ -36,38 +34,46 @@ namespace WebApp.operators
                 && Month != null && Month != ""
                 && Year != null && Year != ""
                 && Email != null && Email != ""
-                && Pass  != null && Pass != ""
-                && RePass != null && RePass != ""
-                && Pass == RePass
-                && Occupation != null && Occupation != "" 
+                && Occupation != null && Occupation != ""
                 && Address != null && Address != ""
                 && Zip != null && Zip != ""
                 && Phone != null && Phone != ""
-                && Mobile  != null && Mobile  != "" 
+                && Mobile != null && Mobile != ""
                 && City != null && City != ""
                 && Country != null && Country != ""
                 )
             {
-                string query = "INSERT INTO USERS VALUES ('' ,'"
-                                       + Title + "','"
-                                       + Name + "','"
-                                       + Surname + "','"
-                                       + Gender + "','"
-                                       + (DateTime.Now.Year - Convert.ToInt32(Year)) + "','"
-                                       + Occupation + "','"
-                                       + Email + "','"
-                                       + Pass + "','"
-                                       +  "','"
-                                       + Address + "','"
-                                       + "','"
-                                       + Phone + "','"
-                                       + Mobile + "','"
-                                       + City + "','"
-                                       + Zip + "','"
-                                       + Country + "'"
-                                       + ");";
+                string query = "UPDATE USERS SET TITLE ='" + Title + "',"
+                    + "FIRSTNAME ='" + Name + "',"
+                    + "LASTNAME ='" + Surname + "',"
+                    + "GENUS ='" + Gender + "',"
+                    + "AGE ='" + (DateTime.Now.Year - Convert.ToInt32(Year)) + "',"
+                    + "PROFESSION ='" + Occupation + "',"
+                    + "EMAIL ='" + Email + "',"
+                    + "ADDRESS1 ='" + Address + "',"
+                    + "PHONE ='" + Phone + "',"
+                    + "CELLPHONE ='" + Mobile + "',"
+                    + "TOWN ='" + City + "',"
+                    + "ZIPCODE ='" + Zip + "',"
+                    + "COUNTRY ='" + Country +"'"
+                    + "WHERE EMAIL ='" + ((classes.user)Session["user"]).email + "';";
                 Console.WriteLine(query);
                 globals.DBINFO.SEND_QUERY(query);
+
+                classes.user SessionUser = (classes.user)Session["user"];
+                SessionUser.title = Title;
+                SessionUser.firstname = Name;
+                SessionUser.lastname = Surname;
+                SessionUser.gender = Gender;
+                SessionUser.age = Convert.ToString(DateTime.Now.Year - Convert.ToInt32(Year));
+                SessionUser.profession = Occupation;
+                SessionUser.email = Email;
+                SessionUser.address1 = Address;
+                SessionUser.phone = Phone;
+                SessionUser.celphone = Mobile;
+                SessionUser.town = City;
+                SessionUser.zipcode = Zip;
+                SessionUser.country = Country;
                 Respond("1");
             }
             else
