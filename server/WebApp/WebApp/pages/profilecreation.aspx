@@ -29,6 +29,7 @@
                 </td>
                 <td>
                     <select id="cp_title">
+                        <option value="" selected>Select...</option>
                         <option value="mr">Mr</option>
                         <option value="miss">Miss</option>
                         <option value="mrs">Mrs</option>

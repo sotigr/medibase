@@ -149,6 +149,7 @@
     <Content Include="pages\Contactpage.aspx" />
     <Content Include="pages\edit_acc.aspx" />
     <Content Include="pages\informationpage.aspx" />
+    <Content Include="pages\open_hosp_phar.aspx" />
     <Content Include="pages\profilecreation.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -222,6 +223,13 @@
     </Compile>
     <Compile Include="pages\informationpage.aspx.designer.cs">
       <DependentUpon>informationpage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\open_hosp_phar.aspx.cs">
+      <DependentUpon>open_hosp_phar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\open_hosp_phar.aspx.designer.cs">
+      <DependentUpon>open_hosp_phar.aspx</DependentUpon>
     </Compile>
     <Compile Include="pages\profilecreation.aspx.cs">
       <DependentUpon>profilecreation.aspx</DependentUpon>
