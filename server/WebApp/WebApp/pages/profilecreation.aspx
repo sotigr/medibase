@@ -4,10 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <style>
-        body {
-            font-size: 12px;
-        }
-
+ 
         .overflow {
             max-height: 300px;
         }

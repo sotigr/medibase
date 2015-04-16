@@ -13,9 +13,11 @@ namespace WebApp
         {
             if (Session["user"] != null)
             {
+              string d=  ((classes.user)Session["user"]).dateofbirth.ToString("dd/MM/yyyy");
+              Console.WriteLine(d);
                 js_session_vars.Controls.Add(new LiteralControl("<script>"
                     + "var loggedin = true;"
-                    + "var username = '" + ((classes.user)Session["user"]).firstname  + "'"
+                    + "var username = '" + ((classes.user)Session["user"]).firstname  + "'" 
                     + "</script>"));
             }
             else

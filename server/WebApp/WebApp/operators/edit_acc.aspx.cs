@@ -55,7 +55,7 @@ namespace WebApp.operators
                     + "CELLPHONE ='" + Mobile + "',"
                     + "TOWN ='" + City + "',"
                     + "ZIPCODE ='" + Zip + "',"
-                    + "COUNTRY ='" + Country +"'"
+                    + "COUNTRY ='" + Country + "'"
                     + "WHERE EMAIL ='" + ((classes.user)Session["user"]).email + "';";
                 Console.WriteLine(query);
                 globals.DBINFO.SEND_QUERY(query);
@@ -65,7 +65,7 @@ namespace WebApp.operators
                 SessionUser.firstname = Name;
                 SessionUser.lastname = Surname;
                 SessionUser.gender = Gender;
-                SessionUser.age = Convert.ToString(DateTime.Now.Year - Convert.ToInt32(Year));
+                SessionUser.dateofbirth = new DateTime(int.Parse(Year), int.Parse(Month), int.Parse(Day));
                 SessionUser.profession = Occupation;
                 SessionUser.email = Email;
                 SessionUser.address1 = Address;

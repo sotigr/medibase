@@ -1,13 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/master.Master" AutoEventWireup="true" CodeBehind="Contactpage.aspx.cs" Inherits="WebApp.pages.WebForm1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-<!DOCTYPE html>
-<html>
-<body>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server"> 
 
-
-<fieldset>
+<div class="main_panel" style="width:600px; margin:0 auto;">
 <legend>Email Us:</legend>
 <legend>Get in touch with us by email.</legend>
 Name:<br>
@@ -25,12 +21,9 @@ Address:<br>
 Comments:<br>
 <input type="text" name="Comments" value=""
 <br><br>
-<input type="submit" value="Submit">
-</fieldset>
-</form>
-
-</body>
-</html>
+<input type="button" value="Submit">
+</div> 
+     
 </asp:Content>
 
  

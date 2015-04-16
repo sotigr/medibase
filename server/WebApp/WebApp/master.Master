@@ -10,16 +10,14 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
     <link rel="stylesheet" href="/css/jquery-ui.css">
     <link rel="stylesheet" href="/css/jquery-ui.theme.css">
-    <link rel="stylesheet" type="text/css" href="../css/main.css">
-    <script src="../js/jquery.js"></script>
-    <script src="../js/jquery-ui.min.js"></script>
+    <script src="/js/jquery.js"></script>
+    <script src="/js/jquery-ui.min.js"></script>
     <div  style="cursor: default;">
         <div class="master_header">
-            <div id="title">
-                Med App
-            </div>
+           <a href="/default.aspx"><div id="title"></div></a> 
             <div class="right_panel" style="display: none;" id="loginpanel">
                 <input class="topbtn" type="button" value="Login" onclick="showlogin()" />
                 <input class="topbtn" type="button" value="Sign Up" onclick="window.location.href = '../pages/profilecreation.aspx';" />
@@ -42,9 +40,9 @@
         <div class="content_host" onclick="genclick()">
             <div class="content"> 
                 <asp:PlaceHolder runat="server" ID="js_session_vars"></asp:PlaceHolder> 
-                <script src="../js/serverinfo.js"></script>
-                <script src="../js/Server.js"></script>
-                <script src="../js/master.js"></script>
+                <script src="/js/serverinfo.js"></script>
+                <script src="/js/Server.js"></script>
+                <script src="/js/master.js"></script>
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                     <!-- Content HERE -->
                 </asp:ContentPlaceHolder>

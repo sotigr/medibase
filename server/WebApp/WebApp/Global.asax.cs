@@ -10,14 +10,29 @@ namespace WebApp
 {
     public class Global : HttpApplication
     {
+        bool showConsole = false;
         void Application_Start(object sender, EventArgs e)
         {
-            globals.FreeConsole();
-            globals.AllocConsole();
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.Write(".:"); Console.ForegroundColor = ConsoleColor.Green; Console.Write("Console Initialized"); Console.ForegroundColor = ConsoleColor.White; Console.Write(":."); Console.ForegroundColor = ConsoleColor.Yellow; Console.Write("(For Bebug Only)\n"); Console.ForegroundColor = ConsoleColor.White;
-            Console.ForegroundColor = ConsoleColor.Magenta; Console.Write("\nConnect to mysql? y/n "); Console.ForegroundColor = ConsoleColor.White;
-            if (Console.ReadLine().ToLower().Trim() == "y")
+            if (showConsole)
+            {
+                globals.FreeConsole();
+                globals.AllocConsole();
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.Write(".:"); Console.ForegroundColor = ConsoleColor.Green; Console.Write("Console Initialized"); Console.ForegroundColor = ConsoleColor.White; Console.Write(":."); Console.ForegroundColor = ConsoleColor.Yellow; Console.Write("(For Bebug Only)\n"); Console.ForegroundColor = ConsoleColor.White;
+                Console.ForegroundColor = ConsoleColor.Magenta; Console.Write("\nConnect to mysql? y/n "); Console.ForegroundColor = ConsoleColor.White;
+                if (Console.ReadLine().ToLower().Trim() == "y")
+                {
+                    if (globals.DBINFO.INSTANTIATE_DATABASE())
+                    {
+                        Console.WriteLine("\nMySQL: Connected with " + globals.DBINFO.DATABASE_INSTANCE.Database + " at " + globals.DBINFO.DATABASE_INSTANCE.DataSource);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Database Connection FAILED");
+                    }
+                }
+            }
+            else
             {
                 if (globals.DBINFO.INSTANTIATE_DATABASE())
                 {
@@ -28,6 +43,7 @@ namespace WebApp
                     Console.WriteLine("Database Connection FAILED");
                 }
             }
+
 
         }
         void Session_Start(object sender, EventArgs e)

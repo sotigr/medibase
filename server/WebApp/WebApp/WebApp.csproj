@@ -16,7 +16,8 @@
     <AssemblyName>WebApp</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
-    <IISExpressSSLPort />
+    <IISExpressSSLPort>
+    </IISExpressSSLPort>
     <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
     <IISExpressWindowsAuthentication>enabled</IISExpressWindowsAuthentication>
     <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
@@ -138,6 +139,10 @@
     <Content Include="default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="images\bg.jpg" />
+    <Content Include="images\logbg.png" />
+    <Content Include="images\logo.png" />
+    <Content Include="js\disp_and_edit_acc.js" />
     <Content Include="js\edit_acc.js" />
     <Content Include="js\jquery-ui.min.js" />
     <Content Include="js\jquery.js" />
@@ -147,14 +152,17 @@
     <Content Include="operators\edit_acc.aspx" />
     <Content Include="operators\loginreq.aspx" />
     <Content Include="pages\Contactpage.aspx" />
+    <Content Include="pages\disp_and_edit_acc.aspx" />
     <Content Include="pages\edit_acc.aspx" />
     <Content Include="pages\informationpage.aspx" />
+    <Content Include="pages\MainPage.aspx" />
     <Content Include="pages\open_hosp_phar.aspx" />
     <Content Include="pages\profilecreation.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="master.Master" />
+    <Content Include="css\Sansation_Regular.ttf" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -210,6 +218,13 @@
     <Compile Include="pages\Contactpage.aspx.designer.cs">
       <DependentUpon>Contactpage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="pages\disp_and_edit_acc.aspx.cs">
+      <DependentUpon>disp_and_edit_acc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\disp_and_edit_acc.aspx.designer.cs">
+      <DependentUpon>disp_and_edit_acc.aspx</DependentUpon>
+    </Compile>
     <Compile Include="pages\edit_acc.aspx.cs">
       <DependentUpon>edit_acc.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -223,6 +238,13 @@
     </Compile>
     <Compile Include="pages\informationpage.aspx.designer.cs">
       <DependentUpon>informationpage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\MainPage.aspx.cs">
+      <DependentUpon>MainPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\MainPage.aspx.designer.cs">
+      <DependentUpon>MainPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="pages\open_hosp_phar.aspx.cs">
       <DependentUpon>open_hosp_phar.aspx</DependentUpon>
@@ -245,7 +267,7 @@
     <Content Include="js\serverinfo.js" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="images\" />
+    <Folder Include="css\fonts\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

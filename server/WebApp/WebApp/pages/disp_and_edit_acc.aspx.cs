@@ -18,7 +18,7 @@ namespace WebApp.pages
                 + "var name = '" + usr.firstname + "';"
                 + "var surname = '" + usr.lastname + "';"
                 + "var gender = '" + usr.gender + "';"
-                + "var age = '" + usr.age + "';"
+                + "var age = '" + Convert.ToString((DateTime.Now.Year) - (usr.dateofbirth.Year)) + "';"
                 + "var email = '" + usr.email + "';"
                 + "var profession = '" + usr.profession + "';"
                 + "var address1 = '" + usr.address1 + "';"

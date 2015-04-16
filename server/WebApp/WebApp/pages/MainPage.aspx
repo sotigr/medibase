@@ -2,24 +2,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-     <div style="text-align:center;">
-        <h1>Welcome to Medical Center</h1>
-    </div>
-<hr>
-    
-    <div style="width:100;">
-        
-        <button type="button" onclick="alert('Hello world!')">Button6</button>
-        <button type="button" style="float:left;" onclick="alert('Hello world!')">Button1</button>
-        <button type="button" style="float:left;" onclick="alert('Hello world!')">Button2</button>
-        <button type="button" style="float:left;" onclick="alert('Hello world!')">Button3</button>
-        <button type="button" style="float:left;" onclick="alert('Hello world!')">Button4</button>
-        <button type="button" style="float:left;" onclick="alert('Hello world!')">Button5</button>
-
-    </div>   
-<div class="panel" style="width:20%; margin:0 auto; margin-top:5%;">   
-</div>
-        <div align="right"><body>
+ 
+        <div align="right" style="position:absolute; float:right; top: 90px; right:10px;"> 
     <script language="javascript" type="text/javascript">
         var day_of_week = new Array('Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat');
         var month_of_year = new Array('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December');
@@ -122,34 +106,13 @@
         document.write(cal);
 
         //  End -->
-</script>
-</body>
-</div>   
-    <style>
-        .main{
-            position: absolute;
-            top: 20%;
-            margin-left: 25%;
-            margin-right: 25%;
-        }
-              
-        .links{
-          position: absolute;
-          top:20%;                   
-       }            
-    </style> 
-    <div style="text-align:center;" class="main_panel" margin-left: 25%; >
+</script> 
+</div>    
+    <div style="text-align:center; margin:0 auto; width:600px;" class="main_panel ">
         <center><font size='+2'>Information</font></center>
         This medical application is a web Application that will have to do with the medical background of a User. In details, the application will be accessible to everyone, but only limited features will be available, such as finding an overnight pharmacy or hospital. In order to access further features of the application the User will have to Sing Up and create a Profile. Upon signing up, a verification e-mail will be sent to the e-mail he/she provided.
         Depending on the User’s Occupation he will have access to some or all the features in the application. For example, a doctor (who has the highest level of accessibility) can receive and send e-mails, check a patient’s, or his own, medical background, contact and search for other personnel in a hospital, as well as receive newsletters from medical sites.
         Users will have a Live Chat feature that will allow them to immediate access to some questions they have or help they need, such as contacting for an emergency.
     </div>
-<div align="left"; class="links"><p>Quick Links:
-<br><a href=''>Something1</a>
-<br><a href=''>Something2</a>
-<br><a href=''>Something3</a>
-<br><a href=''>Something4</a>
-</div>
-
-</html>
+ 
 </asp:Content>

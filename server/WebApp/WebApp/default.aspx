@@ -6,7 +6,7 @@
     <div>
         dz
         <div class="main_panel" style="height: 100px; width: 100px;">
-           <a href="http://www.google.com"> HELLO</a>
+           <a href="#" onclick="showlogin();"> HELLO</a>
         </div>
         <div class="main_panel" style="height: 100px; "> 
         </div> 

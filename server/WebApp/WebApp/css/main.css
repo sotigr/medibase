@@ -1,11 +1,17 @@
-﻿body {
-    background-color: #eee;
+﻿@font-face {
+    font-family: 'myFirstFont';
+    src: url(Sansation_Regular.ttf);
+}
+
+body {
+    background-color: #EDE1FC;
     padding: 0;
     margin: 0;
-    font-family: arial;
     color: #C3CFDE;
     background: url("../images/bg.jpg") no-repeat center center fixed;
     background-size: cover;
+    font-family: 'myFirstFont', Arial;
+    font-size: 14px;
 }
 
 .disable-select {
@@ -16,7 +22,7 @@
 }
 
 .content {
-    margin-top: 40px;
+    margin-top: 80px;
 }
 
 .content_host {
@@ -29,7 +35,7 @@
 }
 
 .master_header {
-background: #45609D;  
+    background: #4C2D74;
     height: 40px;
     border-bottom: 1px solid #000;
     position: fixed;
@@ -38,17 +44,21 @@ background: #45609D;
 }
 
 .login_box {
+    font-family: 'myFirstFont', Arial;
+    font-size: 16px;
     position: absolute;
     width: 200px;
     margin-top: -140px;
-    background: #E3E9F7;
+    background: #B295D8;
+    background: url("../images/logbg.png") no-repeat;
     border: 1px solid #000;
+    background-size: 100% 100%;
     border-radius: 0px 0px 0px 0px;
     box-shadow: 0px 0px 5px #000;
     right: 0;
     margin-right: 10px;
     padding: 3px 5px 5px 5px;
-    color:black;
+    color: black;
 }
 
 input[type=text], input[type=password] {
@@ -56,26 +66,31 @@ input[type=text], input[type=password] {
     width: 100%;
     padding: 0px;
     min-height: 21px;
-    border: 1px solid #aaa;
+    border: 1px solid #EDE1FC;
     background-color: #FFFFFF;
     -webkit-box-shadow: 0 1px 0 white, inset 0 1px 7px rgba(0,0,0,0.4);
     -moz-box-shadow: 0 1px 0 white, inset 0 1px 7px rgba(0,0,0,0.4);
     border-radius: 0px;
+    transition: border 0.8s;
 }
 
     input[type=text]:focus, input[type=password]:focus {
-        border: 1px solid #1288ff;
+        transition: border 0.3s;
+        border: 1px solid #B295D8;
     }
 
 input[type=button] {
-    border: 1px solid #fff;
-    background-color: #45609D;
-    color: #E3E9F7; 
+    font-size: 14px;
+    font-family: 'myFirstFont', Arial;
+    border: 1px solid #EDE1FC;
+    background-color: #4C2D74;
+    color: #E3E9F7;
     border-radius: 0px;
 }
 
     input[type=button]:hover {
-        background-color: #768CC0;
+        background-color: #B295D8;
+        border-color: #4C2D74;
     }
 
 .right_panel {
@@ -84,36 +99,57 @@ input[type=button] {
 }
 
 #title {
-    position: absolute;
-    font-size: 27px;
-    font-family: calibri;
-    font-weight: bold;
-    color:white;
+    margin-left: 10px;
+    position: absolute; 
+    font-weight: bold; 
+    margin-top:10px;
+    height:50px;
+    width:180px;
+    background: url("/images/logo.png") no-repeat;
+    background-size: 100% 100%; 
+    transition:  margin-top 0.5s ease;
 }
-
+#title:hover{  
+    margin-top:13px;  
+    transition:  margin-top 0.5s ease;
+}
 .topbtn {
     height: 24px;
-    color:#fff;
+    color: #fff;
 }
 
 .main_panel {
     /*background-color:#234;*/
-    background-color: #E3E9F7;
+    background-color: #fff;
     border: 1px black solid;
     box-shadow: #000 0px 0px 10px;
     border-radius: 0px;
     padding: 5px;
     margin: 10px;
     margin-top: 10px;
-    color:black;
+    color: black;
 }
+
 a {
     color: #000;
-    font-style:italic;
-    text-decoration:none;
+    font-style: italic;
+    text-decoration: none;  
+      text-shadow: 0 0 0 #B295D8;
     transition: color 1s ease;
+
+    transition: text-shadow 1s ease;
 }
-    a:hover { 
+
+    a:hover {
         transition: color 0.3s ease;
-        color:#aaa; 
+        transition: text-shadow 0.3s ease;
+        text-shadow: 0 0 3px #B295D8;
+        color: #B295D8;
     }
+
+#menu {
+    position: absolute;
+    margin-top: 41px;
+    width: 150px;
+    right: 0;
+}

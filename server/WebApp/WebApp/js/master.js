@@ -39,11 +39,11 @@ function hidelogin() {
 }
 $('#username_box').on('focus', function () {
     ResetLogin();
-    $('#username_box').animate({ "border-color": "#1288ff", "color": "#000" }, 300);
+    $('#username_box').animate({ "border-color": "#B295D8", "color": "#000" }, 300);
 });
 $('#password_box').on('focus', function () {
     ResetLogin(); 
-    $('#password_box').animate({ "border-color": "#1288ff", "color": "#000" }, 300);
+    $('#password_box').animate({ "border-color": "#B295D8", "color": "#000" }, 300);
 });
 $('#username_box').off('focus', function () {
     ResetLogin();
@@ -74,11 +74,11 @@ function dologout() {
 
 $("#loginbtn").on("click", function () {
     if (!($('#username_box').val() == "" )) {
-        if (!(validateEmail($('#username_box').val()))) {
+       /* if (!(validateEmail($('#username_box').val()))) {
             ShowLoginErr("Email is not valid");
             $('#username_box').animate({ "border-color": "#ff0000", "color": "#f00" }, 600);
             return;
-        }
+        }*/
         var parms = {
             uname: $('#username_box').val(),
             password: $('#password_box').val()
@@ -116,16 +116,19 @@ $("#loginbtn").on("click", function () {
         $('#password_box').animate({ "border-color": "#ff0000", "color": "#f00" }, 600);
     }
 });
+//Shows erron on login box
 function ShowLoginErr(text) {
     $('#logerrdiv').html("UserName or Password is not valid.");
     $('#logerrdiv').css('display', 'block');
     $('#logerrdiv').animate({ opacity: 1 }, 300, function () { return; });
 }
+//Hides the error label on the login box
 function HideLoginErr() {
     $('#logerrdiv').animate({ opacity: 0 }, 300, function () {
         $('#logerrdiv').css('display', 'none');
     });
 }
+//Will reset the colors of the login box
 function ResetLogin() {
     HideLoginErr();
     $('#username_box').animate({ "border-color": "#ccc", "color": "#000" }, 300);
