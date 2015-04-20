@@ -21,7 +21,7 @@ namespace WebApp
 
         public static class DBINFO
         {
-            public static string HOST = "192.168.2.9";
+            public static string HOST = "sotignetwork.ddns.net";
             public static string PORT = "3306";
             public static string NAME = "tp2";
             public static string USERNAME = "root";

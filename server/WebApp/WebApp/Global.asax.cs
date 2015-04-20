@@ -10,7 +10,7 @@ namespace WebApp
 {
     public class Global : HttpApplication
     {
-        bool showConsole = false;
+        bool showConsole = true;
         void Application_Start(object sender, EventArgs e)
         {
             if (showConsole)

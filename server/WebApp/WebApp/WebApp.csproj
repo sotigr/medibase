@@ -147,15 +147,19 @@
     <Content Include="js\jquery-ui.min.js" />
     <Content Include="js\jquery.js" />
     <Content Include="js\master.js" />
+    <Content Include="js\message_controller.js" />
     <Content Include="js\profilecreation.js" />
     <Content Include="operators\create_acc.aspx" />
     <Content Include="operators\edit_acc.aspx" />
     <Content Include="operators\loginreq.aspx" />
+    <Content Include="operators\message_op.aspx" />
     <Content Include="pages\Contactpage.aspx" />
     <Content Include="pages\disp_and_edit_acc.aspx" />
     <Content Include="pages\edit_acc.aspx" />
     <Content Include="pages\informationpage.aspx" />
     <Content Include="pages\MainPage.aspx" />
+    <Content Include="pages\message.aspx" />
+    <Content Include="pages\messagelist.aspx" />
     <Content Include="pages\open_hosp_phar.aspx" />
     <Content Include="pages\profilecreation.aspx" />
     <Content Include="Web.config" />
@@ -211,6 +215,13 @@
     <Compile Include="operators\loginreq.aspx.designer.cs">
       <DependentUpon>loginreq.aspx</DependentUpon>
     </Compile>
+    <Compile Include="operators\message_op.aspx.cs">
+      <DependentUpon>message_op.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="operators\message_op.aspx.designer.cs">
+      <DependentUpon>message_op.aspx</DependentUpon>
+    </Compile>
     <Compile Include="pages\Contactpage.aspx.cs">
       <DependentUpon>Contactpage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -245,6 +256,20 @@
     </Compile>
     <Compile Include="pages\MainPage.aspx.designer.cs">
       <DependentUpon>MainPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\message.aspx.cs">
+      <DependentUpon>message.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\message.aspx.designer.cs">
+      <DependentUpon>message.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\messagelist.aspx.cs">
+      <DependentUpon>messagelist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\messagelist.aspx.designer.cs">
+      <DependentUpon>messagelist.aspx</DependentUpon>
     </Compile>
     <Compile Include="pages\open_hosp_phar.aspx.cs">
       <DependentUpon>open_hosp_phar.aspx</DependentUpon>
