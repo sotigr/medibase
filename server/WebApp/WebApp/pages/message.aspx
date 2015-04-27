@@ -33,7 +33,7 @@
         </table>
         <textarea id="msg_content" style="padding-top: 5px; min-width: 100%; min-height: 250px; max-height: 250px; overflow: hidden;"></textarea>
         <div style="text-align: right; margin-top:5px;">
-            <input id="send_message_btn" type="button" value="Send" style="height: 25px; " />
+            <input  type="button" id="send_message_btn" value="Send" style="height: 25px; " />
         </div>
 
     </div>

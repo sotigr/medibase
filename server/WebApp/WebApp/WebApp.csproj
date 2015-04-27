@@ -136,28 +136,59 @@
     <Content Include="css\jquery-ui.css" />
     <Content Include="css\jquery-ui.theme.css" />
     <Content Include="css\main.css" />
+    <Content Include="css\main_page.css" />
     <Content Include="default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="images\a12.png" />
+    <Content Include="images\b05.png" />
     <Content Include="images\bg.jpg" />
+    <Content Include="images\landscape\01.jpg" />
+    <Content Include="images\landscape\02.jpg" />
+    <Content Include="images\landscape\03.jpg" />
+    <Content Include="images\landscape\04.jpg" />
+    <Content Include="images\landscape\05.jpg" />
+    <Content Include="images\landscape\06.jpg" />
+    <Content Include="images\landscape\07.jpg" />
+    <Content Include="images\landscape\08.jpg" />
+    <Content Include="images\landscape\09.jpg" />
+    <Content Include="images\landscape\10.jpg" />
+    <Content Include="images\landscape\11.jpg" />
+    <Content Include="images\landscape\12.jpg" />
+    <Content Include="images\landscape\thumb-01.jpg" />
+    <Content Include="images\landscape\thumb-02.jpg" />
+    <Content Include="images\landscape\thumb-03.jpg" />
+    <Content Include="images\landscape\thumb-04.jpg" />
+    <Content Include="images\landscape\thumb-05.jpg" />
+    <Content Include="images\landscape\thumb-06.jpg" />
+    <Content Include="images\landscape\thumb-07.jpg" />
+    <Content Include="images\landscape\thumb-08.jpg" />
+    <Content Include="images\landscape\thumb-09.jpg" />
+    <Content Include="images\landscape\thumb-10.jpg" />
+    <Content Include="images\landscape\thumb-11.jpg" />
+    <Content Include="images\landscape\thumb-12.jpg" />
     <Content Include="images\logbg.png" />
     <Content Include="images\logo.png" />
-    <Content Include="js\disp_and_edit_acc.js" />
+    <Content Include="js\contact.js" />
     <Content Include="js\edit_acc.js" />
+    <Content Include="js\information_page.js" />
     <Content Include="js\jquery-ui.min.js" />
     <Content Include="js\jquery.js" />
+    <Content Include="js\jssor.js" />
+    <Content Include="js\jssor.slider.js" />
+    <Content Include="js\main_page.js" />
     <Content Include="js\master.js" />
     <Content Include="js\message_controller.js" />
     <Content Include="js\profilecreation.js" />
+    <Content Include="operators\contact_op.aspx" />
     <Content Include="operators\create_acc.aspx" />
     <Content Include="operators\edit_acc.aspx" />
     <Content Include="operators\loginreq.aspx" />
     <Content Include="operators\message_op.aspx" />
-    <Content Include="pages\Contactpage.aspx" />
-    <Content Include="pages\disp_and_edit_acc.aspx" />
+    <Content Include="pages\contact_page.aspx" />
     <Content Include="pages\edit_acc.aspx" />
-    <Content Include="pages\informationpage.aspx" />
-    <Content Include="pages\MainPage.aspx" />
+    <Content Include="pages\information_page.aspx" />
+    <Content Include="pages\main_page.aspx" />
     <Content Include="pages\message.aspx" />
     <Content Include="pages\messagelist.aspx" />
     <Content Include="pages\open_hosp_phar.aspx" />
@@ -194,6 +225,13 @@
     <Compile Include="master.Master.designer.cs">
       <DependentUpon>master.Master</DependentUpon>
     </Compile>
+    <Compile Include="operators\contact_op.aspx.cs">
+      <DependentUpon>contact_op.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="operators\contact_op.aspx.designer.cs">
+      <DependentUpon>contact_op.aspx</DependentUpon>
+    </Compile>
     <Compile Include="operators\create_acc.aspx.cs">
       <DependentUpon>create_acc.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -222,19 +260,12 @@
     <Compile Include="operators\message_op.aspx.designer.cs">
       <DependentUpon>message_op.aspx</DependentUpon>
     </Compile>
-    <Compile Include="pages\Contactpage.aspx.cs">
-      <DependentUpon>Contactpage.aspx</DependentUpon>
+    <Compile Include="pages\contact_page.aspx.cs">
+      <DependentUpon>contact_page.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="pages\Contactpage.aspx.designer.cs">
-      <DependentUpon>Contactpage.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="pages\disp_and_edit_acc.aspx.cs">
-      <DependentUpon>disp_and_edit_acc.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="pages\disp_and_edit_acc.aspx.designer.cs">
-      <DependentUpon>disp_and_edit_acc.aspx</DependentUpon>
+    <Compile Include="pages\contact_page.aspx.designer.cs">
+      <DependentUpon>contact_page.aspx</DependentUpon>
     </Compile>
     <Compile Include="pages\edit_acc.aspx.cs">
       <DependentUpon>edit_acc.aspx</DependentUpon>
@@ -243,19 +274,19 @@
     <Compile Include="pages\edit_acc.aspx.designer.cs">
       <DependentUpon>edit_acc.aspx</DependentUpon>
     </Compile>
-    <Compile Include="pages\informationpage.aspx.cs">
-      <DependentUpon>informationpage.aspx</DependentUpon>
+    <Compile Include="pages\information_page.aspx.cs">
+      <DependentUpon>information_page.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="pages\informationpage.aspx.designer.cs">
-      <DependentUpon>informationpage.aspx</DependentUpon>
+    <Compile Include="pages\information_page.aspx.designer.cs">
+      <DependentUpon>information_page.aspx</DependentUpon>
     </Compile>
-    <Compile Include="pages\MainPage.aspx.cs">
-      <DependentUpon>MainPage.aspx</DependentUpon>
+    <Compile Include="pages\main_page.aspx.cs">
+      <DependentUpon>main_page.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="pages\MainPage.aspx.designer.cs">
-      <DependentUpon>MainPage.aspx</DependentUpon>
+    <Compile Include="pages\main_page.aspx.designer.cs">
+      <DependentUpon>main_page.aspx</DependentUpon>
     </Compile>
     <Compile Include="pages\message.aspx.cs">
       <DependentUpon>message.aspx</DependentUpon>

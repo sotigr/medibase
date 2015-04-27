@@ -21,11 +21,11 @@ namespace WebApp
 
         public static class DBINFO
         {
-            public static string HOST = "sotignetwork.ddns.net";
+            public static string HOST = "localhost";
             public static string PORT = "3306";
-            public static string NAME = "tp2";
+            public static string NAME = "teamproject";
             public static string USERNAME = "root";
-            public static string PASSWORD = "sotig123!";
+            public static string PASSWORD = "";
             public static MySqlConnection DATABASE_INSTANCE;
             public static bool INSTANTIATE_DATABASE()
             {
