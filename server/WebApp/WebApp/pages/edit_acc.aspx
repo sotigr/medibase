@@ -171,7 +171,7 @@
                 <td>
                     <input type="button" id="cp_edit" value="Edit" style="height: 30px;">
                     <input type="button" id="cp_apply" value="Apply" style="display: none; height: 30px;">
-                    <input type="button" id="cp_cancel" value="Cancel" style="height: 30px;" onclick="window.location.href = '/default.aspx';">
+                    <input type="button" id="cp_cancel" value="Cancel" style="height: 30px;" onclick="location.reload();">
                 </td>
             </tr>
         </table>

@@ -46,6 +46,9 @@
     <Reference Include="MySql.Data">
       <HintPath>C:\Users\sotig\Desktop\MySql.Data.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\..\..\..\Desktop\final\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
@@ -136,39 +139,20 @@
     <Content Include="css\jquery-ui.css" />
     <Content Include="css\jquery-ui.theme.css" />
     <Content Include="css\main.css" />
-    <Content Include="css\main_page.css" />
+    <Content Include="css\scrollbar\jquery.mCustomScrollbar.css" />
+    <Content Include="css\scrollbar\mCSB_buttons.png" />
     <Content Include="default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="images\a12.png" />
     <Content Include="images\b05.png" />
     <Content Include="images\bg.jpg" />
-    <Content Include="images\landscape\01.jpg" />
-    <Content Include="images\landscape\02.jpg" />
-    <Content Include="images\landscape\03.jpg" />
-    <Content Include="images\landscape\04.jpg" />
-    <Content Include="images\landscape\05.jpg" />
-    <Content Include="images\landscape\06.jpg" />
-    <Content Include="images\landscape\07.jpg" />
-    <Content Include="images\landscape\08.jpg" />
-    <Content Include="images\landscape\09.jpg" />
-    <Content Include="images\landscape\10.jpg" />
-    <Content Include="images\landscape\11.jpg" />
-    <Content Include="images\landscape\12.jpg" />
-    <Content Include="images\landscape\thumb-01.jpg" />
-    <Content Include="images\landscape\thumb-02.jpg" />
-    <Content Include="images\landscape\thumb-03.jpg" />
-    <Content Include="images\landscape\thumb-04.jpg" />
-    <Content Include="images\landscape\thumb-05.jpg" />
-    <Content Include="images\landscape\thumb-06.jpg" />
-    <Content Include="images\landscape\thumb-07.jpg" />
-    <Content Include="images\landscape\thumb-08.jpg" />
-    <Content Include="images\landscape\thumb-09.jpg" />
-    <Content Include="images\landscape\thumb-10.jpg" />
-    <Content Include="images\landscape\thumb-11.jpg" />
-    <Content Include="images\landscape\thumb-12.jpg" />
+    <Content Include="images\connection.jpg" />
+    <Content Include="images\doctor_examination2.jpg" />
     <Content Include="images\logbg.png" />
     <Content Include="images\logo.png" />
+    <Content Include="images\mainmenubtn.png" />
+    <Content Include="images\man_computer.jpg" />
     <Content Include="js\contact.js" />
     <Content Include="js\edit_acc.js" />
     <Content Include="js\information_page.js" />
@@ -178,19 +162,23 @@
     <Content Include="js\jssor.slider.js" />
     <Content Include="js\main_page.js" />
     <Content Include="js\master.js" />
+    <Content Include="js\messagelist.js" />
     <Content Include="js\message_controller.js" />
     <Content Include="js\profilecreation.js" />
+    <Content Include="js\scrollbar\jquery.mCustomScrollbar.concat.min.js" />
     <Content Include="operators\contact_op.aspx" />
     <Content Include="operators\create_acc.aspx" />
+    <Content Include="operators\delete_msg.aspx" />
     <Content Include="operators\edit_acc.aspx" />
     <Content Include="operators\loginreq.aspx" />
     <Content Include="operators\message_op.aspx" />
+    <Content Include="operators\msg_list_op.aspx" />
     <Content Include="pages\contact_page.aspx" />
     <Content Include="pages\edit_acc.aspx" />
     <Content Include="pages\information_page.aspx" />
     <Content Include="pages\main_page.aspx" />
     <Content Include="pages\message.aspx" />
-    <Content Include="pages\messagelist.aspx" />
+    <Content Include="pages\message_list.aspx" />
     <Content Include="pages\open_hosp_phar.aspx" />
     <Content Include="pages\profilecreation.aspx" />
     <Content Include="Web.config" />
@@ -239,6 +227,13 @@
     <Compile Include="operators\create_acc.aspx.designer.cs">
       <DependentUpon>create_acc.aspx</DependentUpon>
     </Compile>
+    <Compile Include="operators\delete_msg.aspx.cs">
+      <DependentUpon>delete_msg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="operators\delete_msg.aspx.designer.cs">
+      <DependentUpon>delete_msg.aspx</DependentUpon>
+    </Compile>
     <Compile Include="operators\edit_acc.aspx.cs">
       <DependentUpon>edit_acc.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -259,6 +254,13 @@
     </Compile>
     <Compile Include="operators\message_op.aspx.designer.cs">
       <DependentUpon>message_op.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="operators\msg_list_op.aspx.cs">
+      <DependentUpon>msg_list_op.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="operators\msg_list_op.aspx.designer.cs">
+      <DependentUpon>msg_list_op.aspx</DependentUpon>
     </Compile>
     <Compile Include="pages\contact_page.aspx.cs">
       <DependentUpon>contact_page.aspx</DependentUpon>
@@ -295,12 +297,12 @@
     <Compile Include="pages\message.aspx.designer.cs">
       <DependentUpon>message.aspx</DependentUpon>
     </Compile>
-    <Compile Include="pages\messagelist.aspx.cs">
-      <DependentUpon>messagelist.aspx</DependentUpon>
+    <Compile Include="pages\message_list.aspx.cs">
+      <DependentUpon>message_list.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="pages\messagelist.aspx.designer.cs">
-      <DependentUpon>messagelist.aspx</DependentUpon>
+    <Compile Include="pages\message_list.aspx.designer.cs">
+      <DependentUpon>message_list.aspx</DependentUpon>
     </Compile>
     <Compile Include="pages\open_hosp_phar.aspx.cs">
       <DependentUpon>open_hosp_phar.aspx</DependentUpon>

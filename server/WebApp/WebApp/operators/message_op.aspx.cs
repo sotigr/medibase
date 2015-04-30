@@ -19,13 +19,13 @@ namespace WebApp.operators
                 && Content != "" && Content != null)
             {
 
-                string query = "INSERT INTO MESSAGING VALUES ('' ,'"
+                string query = "INSERT INTO MESSAGING VALUES (NULL ,'"
                                      + Recipient + "','"
                                      + ((classes.user)Session["user"]).firstname + " " + ((classes.user)Session["user"]).lastname + "','"
                                      + DateTime.Now.ToString("yyyy-MM-dd") + "','"
                                      + Subject + "','"
                                      + Content + "'"
-                                     + ");"; 
+                                     + ");";
 
                 globals.DBINFO.SEND_QUERY(query);
                 Respond("1");

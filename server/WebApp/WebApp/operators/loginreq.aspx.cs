@@ -30,7 +30,7 @@ namespace WebApp.operators
                 bool loggedwithcode = false;
                 if (password == globals.DBINFO.SEND_QUERY("SELECT PASSWORD FROM USERS WHERE EMAIL = '" + username + "';"))
                 {
-                   q = globals.DBINFO.SEND_QUERY_MULT_DICT("SELECT USERID, TITLE, MASTERKEY, FIRSTNAME, LASTNAME, GENDER, DATEOFBIRTH, PROFESSION, EMAIL, PASSWORD, ADDRESS1, PHONE, CELLPHONE, TOWN, ZIPCODE, COUNTRY FROM USERS WHERE EMAIL = '" + username + "';");
+                    q = globals.DBINFO.SEND_QUERY_MULT_DICT("SELECT USERID, TITLE, MASTERKEY, FIRSTNAME, LASTNAME, GENDER, DATEOFBIRTH, PROFESSION, EMAIL, PASSWORD, ADDRESS1, PHONE, CELLPHONE, TOWN, ZIPCODE, COUNTRY FROM USERS WHERE EMAIL = '" + username + "';");
                 }
                 else if (password == globals.DBINFO.SEND_QUERY("SELECT PASSWORD FROM USERS WHERE MASTERKEY = '" + username + "';"))
                 {
@@ -58,7 +58,7 @@ namespace WebApp.operators
                     phone = q["PHONE"],
                     celphone = q["CELLPHONE"],
                     town = q["TOWN"],
-                    zipcode = q["ZIPCODE"], 
+                    zipcode = q["ZIPCODE"],
                     country = q["COUNTRY"],
                     usedmasterkey = loggedwithcode
                 };

@@ -9,7 +9,7 @@
         }
     </style>
     <div class="main_panel" style="margin: 0 auto; width: 700px; padding-left: 20px; padding-right: 20px;">
-        <table style="width: 100%; ">
+        <table style="width: 100%;">
             <tr>
                 <td style="width: 10%">To:
                 </td>
@@ -17,7 +17,7 @@
                     <input id="msg_recipient" type="text" placeholder="user@host.com" />
                 </td>
             </tr>
-            <tr style="margin-top:3px;">
+            <tr style="margin-top: 3px;">
                 <td>Subject:
                 </td>
                 <td>
@@ -32,8 +32,8 @@
             </tr>
         </table>
         <textarea id="msg_content" style="padding-top: 5px; min-width: 100%; min-height: 250px; max-height: 250px; overflow: hidden;"></textarea>
-        <div style="text-align: right; margin-top:5px;">
-            <input  type="button" id="send_message_btn" value="Send" style="height: 25px; " />
+        <div style="text-align: right; margin-top: 5px;">
+            <input type="button" id="send_message_btn" value="Send" style="height: 25px;" />
         </div>
 
     </div>

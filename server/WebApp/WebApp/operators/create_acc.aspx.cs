@@ -112,17 +112,17 @@ namespace WebApp.operators
                 {
                     Month = "12";
                 }
-                string query = "INSERT INTO USERS VALUES ('' ,'"
+                string query = "INSERT INTO USERS VALUES (NULL ,'"
                                        + masterkey + "','"
                                        + Title + "','"
                                        + Name + "','"
                                        + Surname + "','"
-                                       + Gender + "','" 
-                                       + new DateTime(int.Parse(Year) , int.Parse(Month), int.Parse(Day)).ToString("yyyy-MM-dd") + "','"
+                                       + Gender + "','"
+                                       + new DateTime(int.Parse(Year), int.Parse(Month), int.Parse(Day)).ToString("yyyy-MM-dd") + "','"
                                        + Occupation + "','"
                                        + Email + "','"
-                                       + Pass + "','" 
-                                       + Address + "','" 
+                                       + Pass + "','"
+                                       + Address + "','"
                                        + Phone + "','"
                                        + Mobile + "','"
                                        + City + "','"

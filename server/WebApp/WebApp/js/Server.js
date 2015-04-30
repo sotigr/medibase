@@ -17,7 +17,7 @@
             success: function (data) {
                 alert(data);
             }
-        }); 
+        });
     };
     return Server;
 })();

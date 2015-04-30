@@ -10,37 +10,47 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <link rel="stylesheet" type="text/css" href="/css/main.css">
-    <link rel="stylesheet" href="/css/jquery-ui.css">
-    <link rel="stylesheet" href="/css/jquery-ui.theme.css">
+    <link rel="stylesheet" type="text/css" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/jquery-ui.css" />
+    <link rel="stylesheet" href="/css/jquery-ui.theme.css" />
     <script src="/js/jquery.js"></script>
     <script src="/js/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="/css/scrollbar/jquery.mCustomScrollbar.css" />
     <div style="cursor: default;">
-        <div class="master_header">
-            <a href="/default.aspx">
-                <div id="title"></div>
-            </a>
-            <div class="right_panel" style="display: none;" id="loginpanel">
-                <input class="topbtn" type="button" value="Login" onclick="showlogin()" />
-                <input class="topbtn" type="button" value="Sign Up" onclick="window.location.href = '../pages/profilecreation.aspx';" />
-            </div>
-            <div class="right_panel" id="logoutpanel">
-                <div id="welcome_cont"></div>
-            </div>
-            <div id="login_box" class="login_box">
-                <span>UserName:</span>
-                <input id="username_box" style="height: 25px;" type="text" placeholder="Code or Email">
-                <span>Password:</span>
-                <input id="password_box" style="height: 25px;" type="password" placeholder="Password">
-                <div style="text-align: center; margin-top: 5px;">
-                    <input id="loginbtn" type="Button" value="Login" />
-                    <input type="Button" value="Cancel" onclick="hidelogin()" />
+        <div class="content_host CustomScroll" style="height: 100%; padding-bottom: 40px; margin-top: 40px; position: absolute;">
+            <div class="master_header">
+                <a href="/default.aspx">
+                    <div id="title"></div>
+                </a>
+                <div class="right_panel" style="display: none;" id="loginpanel">
+                    <input class="topbtn" type="button" value="Login" onclick="showlogin();" />
+                    <input class="topbtn" type="button" value="Sign Up" onclick="window.location.href = '../pages/profilecreation.aspx';" />
                 </div>
-                <div style="display: none; text-align: center; color: red;" id="logerrdiv"></div>
+                <div class="right_panel" id="logoutpanel">
+                    <div class="topbtn mainbutton" onclick="showmenu();" style="background-image: url(/images/mainmenubtn.png); background-repeat: no-repeat; background-size: 100% 100%; width: 40px;"></div>
+                    <div class="mainmenu" style="display: none; margin-right: -300px;" id="master_mainmenu">
+                        <div class="mainmenu_item" onclick="window.location.href = '/default.aspx';">Home</div>
+                        <div class="mainmenu_item" onclick="window.location.href = '/pages/edit_acc.aspx';">Profile</div>
+                        <div class="mainmenu_item" onclick="window.location.href = '/pages/message_list.aspx';">Messages</div>
+                        <div id="message_menu_item" style="display: none;" class="mainmenu_item" onclick="window.location.href = '/pages/message.aspx';">New Message</div>
+
+                        <div class="mainmenu_item" onclick="dologout();">Logout</div>
+                    </div>
+                </div>
+                <div id="login_box" class="login_box">
+                    <span>UserName:</span>
+                    <input id="username_box" style="height: 25px;" type="text" placeholder="Code or Email" />
+                    <span>Password:</span>
+                    <input id="password_box" style="height: 25px;" type="password" placeholder="Password" />
+                    <div style="text-align: center; margin-top: 5px;">
+                        <input id="loginbtn" type="button" value="Login" />
+                        <input type="button" value="Cancel" onclick="hidelogin()" />
+                    </div>
+                    <div style="display: none; text-align: center; color: red;" id="logerrdiv"></div>
+                </div>
             </div>
-        </div>
-        <div class="content_host" style="margin-bottom:30px;" onclick="genclick()">
-            <div class="content">
+
+            <div class="content" style="padding-bottom: 10px;" onclick="genclick()">
                 <asp:PlaceHolder runat="server" ID="js_session_vars"></asp:PlaceHolder>
                 <script src="/js/serverinfo.js"></script>
                 <script src="/js/Server.js"></script>
@@ -48,20 +58,34 @@
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                     <!-- Content HERE -->
                 </asp:ContentPlaceHolder>
-                <div id="footer" style="width:100%; font-size:12px; text-align: center; margin-top: 30px;  ">
-                    <a style="color:#0094ff;" href="/open_hosp_phar.aspx"> Find Hospitals & Pharmacies </a>
-                    | 
-                    <a style="color:#0094ff;" href="/information_page.aspx"> About Us </a>
-                    |
-                    <a  style="color:#0094ff;"href="/Contactpage.aspx">Contact Us</a>
-                    <p style="color:#000;">Copyright &copy; 2015 | Karmiris, D., Papaioannou, S., Mytilinaios, A., Iessai, M.</p>
-
-                </div>
-
+            </div>
+            <div id="footer" style="width: 100%; font-size: 12px; text-align: center; padding-top: 30px;">
+                <a style="color: #0094ff;" href="/pages/open_hosp_phar.aspx">Find Hospitals & Pharmacies </a>
+                | 
+                    <a style="color: #0094ff;" href="/pages/information_page.aspx">About Us </a>
+                |
+                    <a style="color: #0094ff;" href="/pages/contact_page.aspx">Contact Us</a>
+                <p style="color: #000;">Copyright &copy; 2015 | Karmiris, D., Papaioannou, S., Mytilinaios, A., Iessai, M.</p>
             </div>
         </div>
     </div>
 
+    <script src="/js/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <script>
+        (function ($) {
+            $(window).load(function () {
+
+                $(".CustomScroll").mCustomScrollbar({
+                    theme: "inset-3-dark",
+                    scrollButtons: {
+                        enable: true
+                    }
+                });
+
+            });
+        })(jQuery);
+	</script>
 
 </body>
 </html>

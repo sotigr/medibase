@@ -11,26 +11,30 @@ namespace WebApp.operators
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-          /*  string Name = Request["m_recipient"];
-            string Subject = Request["m_subject"];
-            string Subject = Request["m_content"];
-            if (Recipient != "" && Recipient != null
+            string Name = Request["c_name"];
+            string Email = Request["c_email"];
+            string Subject = Request["c_subject"];
+            string Comments = Request["c_content"];
+            if (Name != "" && Name != null
+                && Email != "" && Email != null
                 && Subject != "" && Subject != null
-                && Content != "" && Content != null)
+                && Comments != "" && Comments != null)
             {
-
-                string query = "INSERT INTO MESSAGING VALUES ('' ,'"
-                                     + Recipient + "','"
-                                     + ((classes.user)Session["user"]).firstname + " " + ((classes.user)Session["user"]).lastname + "','"
-                                     + DateTime.Now.ToString("yyyy-MM-dd") + "','"
+                string query = "INSERT INTO INBOX VALUES (NULL ,'"
+                                     + Name + "','"
+                                     + Email + "','"
                                      + Subject + "','"
-                                     + Content + "'"
+                                     + Comments + "'"
                                      + ");";
 
                 globals.DBINFO.SEND_QUERY(query);
                 Respond("1");
                 return;
-            }*/
+            }
+            else
+            {
+                Respond("0");
+            }
         }
         void Respond(string message)
         {

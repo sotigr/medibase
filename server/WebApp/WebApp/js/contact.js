@@ -17,7 +17,7 @@
 
         $.ajax({
             type: "POST",
-            url: "/operators/message_op.aspx",
+            url: "/operators/contact_op.aspx",
             async: false,
             data: parms,
             traditional: true,
@@ -28,7 +28,7 @@
                     window.location.href = '/default.aspx';
                 }
                 else {
-                    alert(" Error sending message!");
+                    alert("Error occured when trying to send the message! Please fill in all the boxes!");
                     return;
                 }
             },
@@ -39,6 +39,6 @@
         });
     }
 }
-$('#send_message_btn').on('click', function () {
+$('#send_cont_msg_btn').on('click', function () {
     ReceiveMessage();
 });

@@ -375,7 +375,6 @@ C:\Users\sotig\Documents\GitHub\medipli\server\WebApp\WebApp\bin\DotNetOpenAuth.
 C:\Users\sotig\Documents\GitHub\medipli\server\WebApp\WebApp\bin\DotNetOpenAuth.AspNet.xml
 C:\Users\sotig\Documents\GitHub\medipli\server\WebApp\WebApp\bin\Microsoft.AspNet.Membership.OpenAuth.xml
 C:\Users\sotig\Documents\GitHub\medipli\server\WebApp\WebApp\bin\Microsoft.AspNet.FriendlyUrls.xml
-C:\Users\sotig\Documents\GitHub\medipli\server\WebApp\WebApp\obj\Debug\WebApp.csprojResolveAssemblyReference.cache
 C:\Users\sotig\Documents\GitHub\medipli\server\WebApp\WebApp\obj\Debug\WebApp.dll
 C:\Users\sotig\Documents\GitHub\medipli\server\WebApp\WebApp\obj\Debug\WebApp.pdb
 F:\server\WebApp\WebApp\bin\WebApp.dll
@@ -447,3 +446,5 @@ C:\Users\Exterminus\Desktop\server\WebApp\WebApp\bin\Microsoft.AspNet.FriendlyUr
 C:\Users\Exterminus\Desktop\server\WebApp\WebApp\obj\Debug\WebApp.csprojResolveAssemblyReference.cache
 C:\Users\Exterminus\Desktop\server\WebApp\WebApp\obj\Debug\WebApp.dll
 C:\Users\Exterminus\Desktop\server\WebApp\WebApp\obj\Debug\WebApp.pdb
+C:\Users\sotig\Documents\GitHub\medipli\server\WebApp\WebApp\bin\Newtonsoft.Json.dll
+C:\Users\sotig\Documents\GitHub\medipli\server\WebApp\WebApp\obj\Debug\WebApp.csprojResolveAssemblyReference.cache

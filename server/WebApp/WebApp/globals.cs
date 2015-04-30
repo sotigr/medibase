@@ -21,10 +21,10 @@ namespace WebApp
 
         public static class DBINFO
         {
-            public static string HOST = "localhost";
+            public static string HOST = "192.168.2.7";
             public static string PORT = "3306";
-            public static string NAME = "teamproject";
-            public static string USERNAME = "root";
+            public static string NAME = "medipli";
+            public static string USERNAME = "admin";
             public static string PASSWORD = "";
             public static MySqlConnection DATABASE_INSTANCE;
             public static bool INSTANTIATE_DATABASE()
@@ -54,7 +54,7 @@ namespace WebApp
                 COMMAND.Dispose();
                 return res;
             }
-            public static  string[] SEND_QUERY_MULT(string SQL_QUERY)
+            public static string[] SEND_QUERY_MULT(string SQL_QUERY)
             {
                 MySqlCommand COMMAND = DATABASE_INSTANCE.CreateCommand();
                 COMMAND.CommandText = SQL_QUERY;
@@ -82,13 +82,13 @@ namespace WebApp
                 COMMAND.Dispose();
                 return res;
             }
-             
+
             public static IDictionary<string, string> SEND_QUERY_MULT_DICT(string SQL_QUERY)
             {
                 MySqlCommand COMMAND = DATABASE_INSTANCE.CreateCommand();
                 COMMAND.CommandText = SQL_QUERY;
                 MySqlDataReader reader = COMMAND.ExecuteReader();
-                IDictionary<string, string> dict = new Dictionary<string, string>(); 
+                IDictionary<string, string> dict = new Dictionary<string, string>();
                 while (reader.Read())
                 {
                     for (int x = 0; x < reader.VisibleFieldCount; x++)
@@ -111,7 +111,39 @@ namespace WebApp
                 COMMAND.Dispose();
                 return dict;
             }
+            public static IDictionary<int, IDictionary<string, string>> SEND_QUERY_MULT_DICT_MULT(string SQL_QUERY)
+            {
+                MySqlCommand COMMAND = DATABASE_INSTANCE.CreateCommand();
+                COMMAND.CommandText = SQL_QUERY;
+                MySqlDataReader reader = COMMAND.ExecuteReader();
+                IDictionary<int, IDictionary<string, string>> dict = new Dictionary<int, IDictionary<string, string>>();
+                int cn = 0;
+                while (reader.Read())
+                {
+                    IDictionary<string, string> mlist = new Dictionary<string, string>();
+                    for (int x = 0; x < reader.VisibleFieldCount; x++)
+                    {
 
+                        try
+                        {
+                            if (typeof(string).Equals(reader.GetFieldType(x)))
+                            {
+                                mlist[reader.GetName(x)] = reader.GetString(x);
+                            }
+                            else
+                            {
+                                mlist[reader.GetName(x)] = Convert.ToString(reader.GetString(x));
+                            }
+                        }
+                        catch { }
+                    }
+                    dict[cn] = mlist;
+                    cn += 1;
+                }
+                reader.Close();
+                COMMAND.Dispose();
+                return dict;
+            }
 
             public static void CLOSE_CONNECTION()
             {

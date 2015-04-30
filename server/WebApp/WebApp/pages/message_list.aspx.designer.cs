@@ -11,7 +11,7 @@ namespace WebApp.pages
 {
 
 
-    public partial class informationpage
+    public partial class message_list
     {
     }
 }
