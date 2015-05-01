@@ -446,5 +446,4 @@ C:\Users\Exterminus\Desktop\server\WebApp\WebApp\bin\Microsoft.AspNet.FriendlyUr
 C:\Users\Exterminus\Desktop\server\WebApp\WebApp\obj\Debug\WebApp.csprojResolveAssemblyReference.cache
 C:\Users\Exterminus\Desktop\server\WebApp\WebApp\obj\Debug\WebApp.dll
 C:\Users\Exterminus\Desktop\server\WebApp\WebApp\obj\Debug\WebApp.pdb
-C:\Users\sotig\Documents\GitHub\medipli\server\WebApp\WebApp\bin\Newtonsoft.Json.dll
 C:\Users\sotig\Documents\GitHub\medipli\server\WebApp\WebApp\obj\Debug\WebApp.csprojResolveAssemblyReference.cache

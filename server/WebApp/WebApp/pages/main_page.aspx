@@ -12,19 +12,17 @@
     </div>
     <script type="text/javascript" src="../js/jssor.js"></script>
     <script type="text/javascript" src="../js/jssor.slider.js"></script>
-    <div class="main_panel" style="margin: 0 auto; width: 600px;">
+     <div class="main_panel" style="margin: 0 auto; width: 600px;">
 
         <div id="slider1_container" style="position: relative; top: 0px; left: 0px; right: 0; margin: 0 auto; width: 800px; height: 600px; overflow: hidden;">
-
-            <!-- Loading Screen -->
+         
             <div u="loading" style="position: absolute; top: 0px; left: 0px;">
                 <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; background-color: #000000; top: 0px; left: 0px; width: 100%; height: 100%;">
                 </div>
-                <div style="position: absolute; display: block; background: url(../img/loading.gif) no-repeat center center; top: 0px; left: 0px; width: 100%; height: 100%;">
-                </div>
+           
             </div>
 
-            <!-- Slides Container -->
+           
             <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 800px; height: 600px; overflow: hidden;">
                 <div>
                     <img u="image" src="../images/connection.jpg" />
@@ -53,5 +51,5 @@
 
     <script src="/js/main_page.js">
 
-    </script>
+    </script>  
 </asp:Content>

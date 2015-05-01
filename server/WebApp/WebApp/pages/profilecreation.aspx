@@ -24,12 +24,10 @@
                 <td>Title:
                 </td>
                 <td>
-                    <select id="cp_title">
-                        <option value="" selected>Select...</option>
-                        <option value="mr">Mr</option>
+                    <select id="cp_title"> 
+                        <option value="mr" selected>Mr</option>
                         <option value="miss">Miss</option>
-                        <option value="mrs">Mrs</option>
-                        <option value="dr">Dr</option>
+                        <option value="mrs">Mrs</option> 
                     </select>
                 </td>
             </tr>
@@ -53,7 +51,7 @@
                 <td>
 
                     <div id="radio">
-                        <input type="radio" name="radio" id="cp_male"><label for="cp_male">Male</label>
+                        <input checked="checked" type="radio" name="radio" id="cp_male"><label for="cp_male">Male</label>
                         <input type="radio" name="radio" id="cp_female"><label for="cp_female">Female</label>
                     </div>
                 </td>

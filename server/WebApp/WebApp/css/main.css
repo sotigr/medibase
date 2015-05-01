@@ -8,13 +8,21 @@ body {
     padding: 0;
     margin: 0;
     color: #C3CFDE;
-    background: url("../images/bg.jpg") no-repeat center center fixed;
-    background-size: cover;
+ 
     font-family: 'myFirstFont', Arial;
     font-size: 14px;
     overflow:hidden;
 }
-
+.bg {
+    background: url("../images/bg.jpg") no-repeat center center fixed;
+    background-size: cover;
+    position:absolute;
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+    z-index:-100;
+}
 .disable-select {
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -70,9 +78,7 @@ input[type=text], input[type=password], textarea {
     padding: 0px;
     min-height: 21px;
     border: 1px solid #EDE1FC;
-    background-color: #FFFFFF;
-    -webkit-box-shadow: 0 1px 0 white, inset 0 1px 7px rgba(0,0,0,0.4);
-    -moz-box-shadow: 0 1px 0 white, inset 0 1px 7px rgba(0,0,0,0.4);
+    background-color: #FFFFFF; 
     border-radius: 0px;
     transition: border 0.8s;
 }
@@ -83,6 +89,7 @@ input[type=text], input[type=password], textarea {
     }
 
 input[type=button], .mainbutton {
+    outline:none;
     font-size: 14px;
     font-family: 'myFirstFont', Arial;
     border: 1px solid #EDE1FC;
@@ -96,6 +103,10 @@ input[type=button], .mainbutton {
         border-color: #000;
     }
 
+span, h3{
+    
+    outline:none;
+}
 .right_panel {
     float: right;
     margin: 7px 10px 0px 0px;

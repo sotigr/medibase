@@ -25,7 +25,7 @@ namespace WebApp
             public static string PORT = "3306";
             public static string NAME = "medipli";
             public static string USERNAME = "admin";
-            public static string PASSWORD = "";
+            public static string PASSWORD = "sotig19951995!";
             public static MySqlConnection DATABASE_INSTANCE;
             public static bool INSTANTIATE_DATABASE()
             {

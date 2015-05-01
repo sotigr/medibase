@@ -8,8 +8,7 @@ var d = new Date();
 for (i = d.getFullYear() ; i >= 1900 ; i--) {
     $select.append($('<option></option>').val(i).html(i))
 }
-$('#radio').buttonset();
-$('#radio').buttonset();
+$('#radio').buttonset(); 
 $('#cp_title').selectmenu().selectmenu("menuWidget")
 .addClass("overflow");
 $('#day').selectmenu().selectmenu("menuWidget")

@@ -31,7 +31,7 @@
                     <div style="margin-top: 10px;">
                         Comments: 
                     </div>
-                    <textarea id="cont_msg" style="padding-top: 5px; min-width: 100%; max-width: 100%; min-height: 250px; max-height: 250px; overflow: hidden;"></textarea>
+                    <textarea id="cont_msg" style="padding-top: 5px; min-width: 100%; max-width: 0; min-height: 250px; max-height: 250px; overflow: hidden;"></textarea>
                     <div style="text-align: right; padding-top: 5px;">
                         <input type="button" value="Back" style="height: 30px;" onclick="window.location.href = '../default.aspx';" />
                         <input type="button" id="send_cont_msg_btn" value="Send" style="height: 30px;" />

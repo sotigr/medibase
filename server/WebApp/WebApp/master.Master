@@ -16,8 +16,9 @@
     <script src="/js/jquery.js"></script>
     <script src="/js/jquery-ui.min.js"></script>
     <link rel="stylesheet" href="/css/scrollbar/jquery.mCustomScrollbar.css" />
+    <div class="bg"></div>
     <div style="cursor: default;">
-        <div class="content_host CustomScroll" style="height: 100%; padding-bottom: 40px; margin-top: 40px; position: absolute;">
+        
             <div class="master_header">
                 <a href="/default.aspx">
                     <div id="title"></div>
@@ -26,7 +27,7 @@
                     <input class="topbtn" type="button" value="Login" onclick="showlogin();" />
                     <input class="topbtn" type="button" value="Sign Up" onclick="window.location.href = '../pages/profilecreation.aspx';" />
                 </div>
-                <div class="right_panel" id="logoutpanel">
+                <div class="right_panel" style="display:none;" id="logoutpanel">
                     <div class="topbtn mainbutton" onclick="showmenu();" style="background-image: url(/images/mainmenubtn.png); background-repeat: no-repeat; background-size: 100% 100%; width: 40px;"></div>
                     <div class="mainmenu" style="display: none; margin-right: -300px;" id="master_mainmenu">
                         <div class="mainmenu_item" onclick="window.location.href = '/default.aspx';">Home</div>
@@ -49,7 +50,7 @@
                     <div style="display: none; text-align: center; color: red;" id="logerrdiv"></div>
                 </div>
             </div>
-
+<div class="content_host CustomScroll" style="height: 100%; padding-bottom: 40px; margin-top: 40px; position: absolute;">
             <div class="content" style="padding-bottom: 10px;" onclick="genclick()">
                 <asp:PlaceHolder runat="server" ID="js_session_vars"></asp:PlaceHolder>
                 <script src="/js/serverinfo.js"></script>
