@@ -1,4 +1,14 @@
-﻿function SendMessage() {
+﻿// A function that receives the information entered by the user
+// in order to store the message the doctor sends to another user.
+// If a box is blank or a subject is not selected, the user is prompted
+// to complete it. The data are stored in a variable and sent with a 
+// POST command through ajax to the operator responsible for dealing 
+// with the received data. If the messages is sent successfully, the user
+// sees a "success" notification as is redirected to the main page.
+//
+// Karmiris D.
+
+function SendMessage() {
     var recipient = $('#msg_recipient').val();
     var subject = $('#msg_subject option:selected').text();
     var content = $('#msg_content').val();

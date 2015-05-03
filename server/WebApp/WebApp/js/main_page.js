@@ -1,4 +1,8 @@
-﻿
+﻿// This code was found online. It is used along with the
+// jssor.js and the jssor.slider.js in order to create 
+// the slider on the main page.
+//
+// Papaioannou S. & Karmiris D.
 var slide = 1;
 var interval;
   

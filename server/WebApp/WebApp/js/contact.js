@@ -1,4 +1,14 @@
-﻿function ReceiveMessage() {
+﻿// A function that receives the information entered by the user
+// in order to store the comments of that user. If a box is
+// left blank, the user is prompted to fill it. 
+// The data are stored in a variable and sent with a POST command
+// through ajax to the operator responsible for dealing with the
+// received data. If the messages is sent successfully, the user
+// sees a "success" notification as is redirected to the main page.
+//
+// Karmiris D.
+
+function ReceiveMessage() {
     var name = $('#cont_name').val();
     var email = $('#cont_email').val();
     var subject = $('#cont_subject').val();
@@ -24,7 +34,7 @@
             dataType: "json",
             success: function (data) {
                 if (data == "1") {
-                    alert("Message sent Successfully");
+                    alert("Thank you for contacting us.");
                     window.location.href = '/default.aspx';
                 }
                 else {
@@ -39,6 +49,11 @@
         });
     }
 }
+
+// The event when clicking the "Send" button
+//
+// Karmiris D.
+
 $('#send_cont_msg_btn').on('click', function () {
     ReceiveMessage();
 });

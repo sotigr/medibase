@@ -1,4 +1,9 @@
-﻿$('#val_title').html(title);
+﻿// Variables that contain the information of the user
+// as they are wirtten in the Database.
+//
+// Karmiris D.
+
+$('#val_title').html(title);
 $('#val_name').html(name);
 $('#val_surname').html(surname);
 $('#val_gender').html(gender);
@@ -28,6 +33,12 @@ $("#cp_male").click(function () {
 $("#cp_female").click(function () {
     radioval = "female";
 });
+
+// When the "Edit" button is clicked, all the "display" variables become hidden,
+// and are replaced by the editable textboxes, while the buttons change as well
+// to "Apply" and "Cancel".
+//
+// Karmiris D.
 
 $('#cp_edit').on('click', function () {
     $('#cp_apply').css('display', 'block');
@@ -68,6 +79,13 @@ $('#cp_edit').on('click', function () {
     $('#cp_city').val(town);
     $('#cp_country').val(country);
 });
+
+// After clicking the "Apply" button the new data are stored in the variables
+// that appeared after the "Edit" button was pressed. If all of fields are 
+// not null or blank the data are stored in a variable and are sent to the 
+// Database with a POST command via ajax.
+//
+// Karmiris D.
 
 $('#cp_apply').on('click', function () {
     $('#cp_edit').css('display', 'block');

@@ -24,6 +24,14 @@ $("#cp_male").click(function () {
 $("#cp_female").click(function () {
     radioval = "female";
 });
+
+// Upon clicking the "Submit" button, the data entered by the user  
+// are stored in variables. If all of fields are not null or blank
+// the varaibles are stored in another variable and are sent to the 
+// Database with a POST command via ajax.
+//
+// Karmiris D.
+
 $('#cp_submit').on('click', function () {
     var title = $('#cp_title option:selected').text();
     var name = $('#cp_name').val();
