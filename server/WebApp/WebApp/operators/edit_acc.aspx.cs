@@ -11,6 +11,13 @@ namespace WebApp.operators
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            // All the information are passed in variables.
+            // After that, an if statement is initiated that checks if all the fields have a value.
+            // If it passes, then the database is updated with the new information
+            // and the display account page receives all the new information to display.
+            //
+            // Karmiris D.
+
             string Title = Request["s_title"];
             string Name = Request["s_name"];
             string Surname = Request["s_surname"];

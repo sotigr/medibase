@@ -11,16 +11,15 @@ namespace WebApp.pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            // If the user is not logged in the message list page will not be accessible.
+            //
+            // Papaioannou S.
+
             if (Session["user"] == null)
             {
                 Response.Clear();
                 Response.End();
                 return;
-            }
-            if (((classes.user)Session["user"]).title != "Dr")
-            {
-                Response.Clear();
-                Response.End();
             }
         }
     }

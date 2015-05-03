@@ -11,6 +11,11 @@ namespace WebApp.pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            // If the user is logged in, then the page will display the information
+            // that were entered priorly in the database.
+            //
+            // Karmiris D.
+
             if (Session["user"] != null)
             {
                 classes.user usr = (classes.user)Session["user"];

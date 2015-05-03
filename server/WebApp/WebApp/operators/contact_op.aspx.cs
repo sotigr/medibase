@@ -11,6 +11,13 @@ namespace WebApp.operators
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            // The information entered by the user are passed in to variables.
+            // As long as these variables are not "null" or empty the message 
+            // along with the rest of the information are inserted in the 
+            // application's Database.
+            // 
+            // Karmiris D.
+
             string Name = Request["c_name"];
             string Email = Request["c_email"];
             string Subject = Request["c_subject"];

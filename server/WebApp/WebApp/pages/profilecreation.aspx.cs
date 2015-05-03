@@ -11,6 +11,10 @@ namespace WebApp.pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            // If the user is logged in the the profile creation page will not be displayed.
+            //
+            // Karmiris D.
+
             if (Session["user"] != null)
             {
                 Response.Clear();

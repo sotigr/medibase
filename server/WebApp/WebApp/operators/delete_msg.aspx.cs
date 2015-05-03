@@ -11,18 +11,19 @@ namespace WebApp.operators
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
             if (Session["user"] == null)
             {
                 Response.Clear();
                 Response.End();
                 return;
             }
-            if (((classes.user)Session["user"]).title != "Dr")
-            {
-                Response.Clear();
-                Response.End();
-            }
+            
+            // If the user is logged in a request for the ID of the message is requested from the Database and passed into the variable "msgid".
+            // The Message with the same ID as "msgid" and "email" as the logged in user is being deleted.
+            //
+            // Papaioannou S.
+
             else
             {
                 string msgid = Request["mid"];

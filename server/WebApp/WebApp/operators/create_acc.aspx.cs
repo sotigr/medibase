@@ -9,6 +9,10 @@ namespace WebApp.operators
 {
     public partial class create_acc : System.Web.UI.Page
     {
+        // Converts a string to Bytes.
+        //
+        // Papaioannou S.
+
         static byte[] GetBytes(string str)
         {
             byte[] bytes = new byte[str.Length * sizeof(char)];
@@ -16,12 +20,19 @@ namespace WebApp.operators
             return bytes;
         }
 
+        // Converts bytes to String.
+        //
+        // Papaioannou S.
         static string GetString(byte[] bytes)
         {
             char[] chars = new char[bytes.Length / sizeof(char)];
             System.Buffer.BlockCopy(bytes, 0, chars, 0, bytes.Length);
             return new string(chars);
         }
+
+        // The user's information are passed in on variables. As long as they are not "null" or empty
+        // a unique Master Key is being created for  that user, and then all the information are being
+        // inserted in the Database.
         protected void Page_Load(object sender, EventArgs e)
         {
             string Title = Request["s_title"];
@@ -145,6 +156,10 @@ namespace WebApp.operators
             Response.End();
         }
     }
+
+    // A Hash Algorithm for hte creation of hashes requuired for the generation of a user's unique Master Key.
+    //
+    // Papaioannou S.
     class Crc32 : HashAlgorithm
     {
         public const UInt32 DefaultPolynomial = 0xedb88320u;

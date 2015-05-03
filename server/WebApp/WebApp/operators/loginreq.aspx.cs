@@ -14,6 +14,12 @@ namespace WebApp.operators
             string username = Request["uname"];
             string password = Request["password"];
             string command = Request["com"];
+
+            // If the user sends a command and that command is logout,
+            // then the user gets logged otu of the application.
+            //
+            // Papaioannou S.
+
             if (command != null)
             {
                 if (command == "logout")
@@ -24,6 +30,13 @@ namespace WebApp.operators
                     return;
                 }
             }
+
+            // If a user enters a username and a password and both are in the database under the same registration
+            // then a check is initiated to find if the user tried to log in with his email or his unique key.
+            // If the username and password match, then the a Session opens for that user that carries all his information.
+            //
+            // Papaioannou S.
+
             if (username != null && password != null)
             {
                 IDictionary<string, string> q;

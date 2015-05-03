@@ -11,6 +11,11 @@ namespace WebApp.pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            // If the user is not logged or the his title is other than Doctor (Dr),
+            // then page will not be displayed or accessible to that user.
+            //
+            // Papaioannou S.
+
             if (Session["user"] == null)
             {
                 Response.Clear();
